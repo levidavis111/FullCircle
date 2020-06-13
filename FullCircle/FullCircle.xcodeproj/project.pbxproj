@@ -33,6 +33,7 @@
 		EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */; };
 		EAE7118A249562AA00418D64 /* ActionListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */; };
 		EAE7118C24956EAB00418D64 /* ActionListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118B24956EAB00418D64 /* ActionListViewController+TableView.swift */; };
+		EAE7119024956F6400418D64 /* ActionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118F24956F6400418D64 /* ActionListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListTableViewCell+Constraints.swift"; sourceTree = "<group>"; };
 		EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+Constraints.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+Constraints.swift"; sourceTree = SOURCE_ROOT; };
 		EAE7118B24956EAB00418D64 /* ActionListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+TableView.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+TableView.swift"; sourceTree = SOURCE_ROOT; };
+		EAE7118F24956F6400418D64 /* ActionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionListTableViewCell.swift; path = FullCircle/Views/TableViewCells/ActionListTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 		EAE7118524953A8300418D64 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				EAE7118E24956F4F00418D64 /* ActionListTVCell */,
 				EAE7118D24956F2F00418D64 /* OrgListTVCell */,
 			);
 			path = TableViewCells;
@@ -260,6 +263,14 @@
 				EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */,
 			);
 			path = OrgListTVCell;
+			sourceTree = "<group>";
+		};
+		EAE7118E24956F4F00418D64 /* ActionListTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7118F24956F6400418D64 /* ActionListTableViewCell.swift */,
+			);
+			path = ActionListTVCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE7119024956F6400418D64 /* ActionListTableViewCell.swift in Sources */,
 				EAE7118A249562AA00418D64 /* ActionListViewController+Constraints.swift in Sources */,
 				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
 				EAE7118C24956EAB00418D64 /* ActionListViewController+TableView.swift in Sources */,

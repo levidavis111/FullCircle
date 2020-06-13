@@ -1,0 +1,16 @@
+PODS:
+  - CellDataCoupler (2.2.0)
+
+DEPENDENCIES:
+  - CellDataCoupler
+
+SPEC REPOS:
+  trunk:
+    - CellDataCoupler
+
+SPEC CHECKSUMS:
+  CellDataCoupler: 42a9509f5f7dba8d09400b8f0a9a4feef8b89dd2
+
+PODFILE CHECKSUM: 217cd16363febb89f5e1a701e6158cce95cfb25c
+
+COCOAPODS: 1.9.3

@@ -28,7 +28,7 @@ class ActionListViewController: UIViewController {
     lazy var allButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "a.circle"), for: .normal)
-        button.setImage(UIImage(systemName: "a.circle.fill"), for: .selected)
+//        button.setImage(UIImage(systemName: "a.circle.fill"), for: .selected)
         button.tintColor = .black
         return button
     }()
@@ -36,7 +36,7 @@ class ActionListViewController: UIViewController {
     lazy var easyButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "1.circle"), for: .normal)
-        button.setImage(UIImage(systemName: "1.circle.fill"), for: .selected)
+//        button.setImage(UIImage(systemName: "1.circle.fill"), for: .selected)
         button.tintColor = .black
         return button
     }()
@@ -44,7 +44,7 @@ class ActionListViewController: UIViewController {
     lazy var mediumButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "2.circle"), for: .normal)
-        button.setImage(UIImage(systemName: "2.circle.fill"), for: .selected)
+//        button.setImage(UIImage(systemName: "2.circle.fill"), for: .selected)
         button.tintColor = .black
         return button
     }()
@@ -52,7 +52,7 @@ class ActionListViewController: UIViewController {
     lazy var hardButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "3.circle"), for: .normal)
-        button.setImage(UIImage(systemName: "3.circle.fill"), for: .selected)
+//        button.setImage(UIImage(systemName: "3.circle.fill"), for: .selected)
         button.tintColor = .black
         return button
     }()

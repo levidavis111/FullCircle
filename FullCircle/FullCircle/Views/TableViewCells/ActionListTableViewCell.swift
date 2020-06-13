@@ -14,12 +14,14 @@ class ActionListTableViewCell: UITableViewCell {
     let actionNameLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .green
+        label.numberOfLines = 0
         return label
     }()
     
     let orgNameLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .yellow
+        label.numberOfLines = 0
         return label
     }()
 

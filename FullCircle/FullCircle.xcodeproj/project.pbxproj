@@ -88,11 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE71175249461FA00418D64 /* App Lifecycle */,
-				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
-				EAE7116D24945FCD00418D64 /* OrgListViewController.swift */,
-				EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */,
-				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
-				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
+				EAE711762494623700418D64 /* Controllers */,
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
 				EAE711522494487D00418D64 /* Assets.xcassets */,
 				EAE711542494487D00418D64 /* LaunchScreen.storyboard */,
@@ -117,6 +113,18 @@
 				EAE7114B2494487A00418D64 /* SceneDelegate.swift */,
 			);
 			path = "App Lifecycle";
+			sourceTree = "<group>";
+		};
+		EAE711762494623700418D64 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
+				EAE7116D24945FCD00418D64 /* OrgListViewController.swift */,
+				EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */,
+				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
+				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

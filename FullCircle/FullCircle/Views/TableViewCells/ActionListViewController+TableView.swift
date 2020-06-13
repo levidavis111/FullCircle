@@ -32,5 +32,9 @@ extension ActionListViewController: UITableViewDelegate {
         return 120
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Segue into ActionDetailVC here
+    }
+    
 }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Organization {
+struct Organization: Codable {
     let name: String
     let description: String
     let address: String
@@ -31,7 +31,8 @@ struct Organization {
     ]
 }
 
-enum OrganizationType {
+enum OrganizationType: String, Codable {
+    
     case nonprofit
     case forProfit
     case lobby
@@ -39,7 +40,7 @@ enum OrganizationType {
     case individual
 }
 
-enum Borough: String {
+enum Borough: String, Codable {
     case manhattan = "Manhattan"
     case brooklyn = "Brooklyn"
     case queens = "Queens"

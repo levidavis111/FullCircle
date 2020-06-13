@@ -31,6 +31,7 @@
 		EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */; };
 		EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */; };
 		EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */; };
+		EAE7118A249562AA00418D64 /* ActionListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+Constraints.swift"; sourceTree = "<group>"; };
 		EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListTableViewCell.swift; sourceTree = "<group>"; };
 		EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListTableViewCell+Constraints.swift"; sourceTree = "<group>"; };
+		EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+Constraints.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+Constraints.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
+				EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */,
 			);
 			path = ActionListViewController;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE7118A249562AA00418D64 /* ActionListViewController+Constraints.swift in Sources */,
 				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
 				48B331D524953095007080C7 /* TableSource.swift in Sources */,

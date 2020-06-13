@@ -23,18 +23,22 @@ class ActionListViewController: UIViewController {
         return searchBar
     }()
     
+    //TODO: Update temporary icons
     lazy var easyButton: UIButton = {
         let button = UIButton()
+        button.imageView?.image = UIImage(named: "1.circle")
         return button
     }()
     
     lazy var mediumButton: UIButton = {
         let button = UIButton()
+        button.imageView?.image = UIImage(named: "2.circle")
         return button
     }()
     
     lazy var hardButton: UIButton = {
         let button = UIButton()
+        button.imageView?.image = UIImage(named: "3.circle")
         return button
     }()
     

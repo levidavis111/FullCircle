@@ -128,9 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
-				EAE7116D24945FCD00418D64 /* OrgListViewController.swift */,
-				EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */,
-				EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */,
+				EAE7118224953A4E00418D64 /* OrgListViewController */,
 				EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */,
 				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
@@ -161,6 +159,16 @@
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EAE7118224953A4E00418D64 /* OrgListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7116D24945FCD00418D64 /* OrgListViewController.swift */,
+				EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */,
+				EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */,
+			);
+			path = OrgListViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

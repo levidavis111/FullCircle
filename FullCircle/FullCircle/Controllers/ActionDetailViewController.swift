@@ -14,9 +14,9 @@ class ActionDetailViewController: UIViewController {
     private let padding: CGFloat = 10.0
     private lazy var imagePath = UIBezierPath(rect: activityTypeIconView.frame)
     
-    private lazy var orgLogoView: UIImageView = {[weak self] in
+    private lazy var orgLogoView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: self?.action.organization.logoString)
+        imageView.image = UIImage(named: self.action.organization.logoString)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -27,9 +27,9 @@ class ActionDetailViewController: UIViewController {
         return label
     }()
     
-    private lazy var activityTypeIconView: UIImageView = {[weak self] in
+    private lazy var activityTypeIconView: UIImageView = {
         let iconView = UIImageView()
-        iconView.image = UIImage(named: self?.action.iconString)
+        iconView.image = UIImage(named: self.action.iconString)
         return iconView
     }()
     
@@ -64,9 +64,9 @@ class ActionDetailViewController: UIViewController {
     }
     
     private func setExclusionPath() {
-        DispatchQueue.main.async {[weak self] in
-            self?.descriptionTextView.textContainer.exclusionPaths = [self?.imagepath]
-            self?.view.layoutIfNeeded()
+        DispatchQueue.main.async {
+            self.descriptionTextView.textContainer.exclusionPaths = [self.imagePath]
+            self.view.layoutIfNeeded()
         }
     }
     

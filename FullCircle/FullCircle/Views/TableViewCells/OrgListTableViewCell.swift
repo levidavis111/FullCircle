@@ -27,7 +27,7 @@ class OrgListTableViewCell: UITableViewCell {
     lazy var orgLogoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .blue
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         return imageView
     }()

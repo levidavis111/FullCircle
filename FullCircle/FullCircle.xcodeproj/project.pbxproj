@@ -94,7 +94,7 @@
 				EAE71175249461FA00418D64 /* App Lifecycle */,
 				EAE71178249463A500418D64 /* Models */,
 				EAE711762494623700418D64 /* Controllers */,
-				EAE7114F2494487A00418D64 /* Main.storyboard */,
+				EAE7117D249463FB00418D64 /* Views */,
 				EAE711772494626E00418D64 /* Supporting Files */,
 				EAE711572494487D00418D64 /* Info.plist */,
 			);
@@ -147,6 +147,14 @@
 				EAE7117B249463CA00418D64 /* Action.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EAE7117D249463FB00418D64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7114F2494487A00418D64 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

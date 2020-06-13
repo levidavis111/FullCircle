@@ -41,5 +41,4 @@ extension OrgListViewController {
             orgListTableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
         ])
     }
-    
 }

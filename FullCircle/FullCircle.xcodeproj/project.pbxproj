@@ -27,6 +27,8 @@
 		EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117324945FF400418D64 /* ActionDetailViewController.swift */; };
 		EAE7117A249463B400418D64 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE71179249463B400418D64 /* Organization.swift */; };
 		EAE7117C249463CA00418D64 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117B249463CA00418D64 /* Action.swift */; };
+		FC380B532495529C00DE703D /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B522495529C00DE703D /* PersistenceHelper.swift */; };
+		FC380B552495569900DE703D /* ActionPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B542495569900DE703D /* ActionPersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		EAE7117324945FF400418D64 /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
 		EAE71179249463B400418D64 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		EAE7117B249463CA00418D64 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		FC380B522495529C00DE703D /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		FC380B542495569900DE703D /* ActionPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 				EAE71178249463A500418D64 /* Models */,
 				EAE711762494623700418D64 /* Controllers */,
 				EAE7117D249463FB00418D64 /* Views */,
+				FC380B512495523900DE703D /* Persistence */,
 				EAE711772494626E00418D64 /* Supporting Files */,
 				EAE711572494487D00418D64 /* Info.plist */,
 			);
@@ -210,6 +215,15 @@
 				48B4CA372495292C007B621E /* OrgDetail.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FC380B512495523900DE703D /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				FC380B522495529C00DE703D /* PersistenceHelper.swift */,
+				FC380B542495569900DE703D /* ActionPersistenceManager.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
+				FC380B532495529C00DE703D /* PersistenceHelper.swift in Sources */,
 				48B331D524953095007080C7 /* TableSource.swift in Sources */,
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
 				48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */,
@@ -394,6 +409,7 @@
 				48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */,
 				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
 				EAE7116E24945FCD00418D64 /* OrgListViewController.swift in Sources */,
+				FC380B552495569900DE703D /* ActionPersistenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

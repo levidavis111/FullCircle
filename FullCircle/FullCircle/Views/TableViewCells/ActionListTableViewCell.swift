@@ -34,9 +34,11 @@ class ActionListTableViewCell: UITableViewCell {
         return imageView
     }()
     
+    //TODO: Place temp image
     lazy var saveActionButton: UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+        button.addTarget(self, action: #selector(saveActionButtonPressed(_:)), for: .touchUpInside)
         return button
     }()
     
@@ -65,4 +67,8 @@ class ActionListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    @objc func saveActionButtonPressed(_ sender: UIButton) {
+        // Take care of persisting saved actions here
+    }
 }

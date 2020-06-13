@@ -23,6 +23,7 @@
 		EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */; };
 		EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */; };
 		EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */; };
+		EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+TableView.swift"; sourceTree = "<group>"; };
 		EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+Constraints.swift"; sourceTree = "<group>"; };
 		EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListTableViewCell.swift; sourceTree = "<group>"; };
+		EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListTableViewCell+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */,
+				EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
 				EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */,
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
+				EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */,
 				EAE7117024945FDA00418D64 /* OrgDetailViewController.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,

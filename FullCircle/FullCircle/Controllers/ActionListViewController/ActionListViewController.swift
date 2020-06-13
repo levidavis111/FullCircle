@@ -9,13 +9,6 @@
 import UIKit
 
 class ActionListViewController: UIViewController {
-
-    /*
-     - Icons for action types to filter through actions (tags)
-     - What org (ex: BLM NY)
-     - Type of action (colored label? icon. ex: Telephone icon)
-     - Name of action (ex: "Call Rep Thomas") - save extended description for DVC
-     */
     
     //MARK: - UI Objects
     lazy var searchBar: UISearchBar = {

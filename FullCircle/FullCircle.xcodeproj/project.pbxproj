@@ -22,6 +22,7 @@
 		EAE7117C249463CA00418D64 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117B249463CA00418D64 /* Action.swift */; };
 		EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */; };
 		EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */; };
+		EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		EAE7117B249463CA00418D64 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+TableView.swift"; sourceTree = "<group>"; };
 		EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+Constraints.swift"; sourceTree = "<group>"; };
+		EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
+				EAE7118524953A8300418D64 /* TableViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +172,14 @@
 				EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */,
 			);
 			path = OrgListViewController;
+			sourceTree = "<group>";
+		};
+		EAE7118524953A8300418D64 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
+				EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */,
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7117024945FDA00418D64 /* OrgDetailViewController.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,

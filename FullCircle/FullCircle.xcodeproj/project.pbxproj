@@ -90,8 +90,7 @@
 				EAE71175249461FA00418D64 /* App Lifecycle */,
 				EAE711762494623700418D64 /* Controllers */,
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
-				EAE711522494487D00418D64 /* Assets.xcassets */,
-				EAE711542494487D00418D64 /* LaunchScreen.storyboard */,
+				EAE711772494626E00418D64 /* Supporting Files */,
 				EAE711572494487D00418D64 /* Info.plist */,
 			);
 			path = FullCircle;
@@ -125,6 +124,15 @@
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EAE711772494626E00418D64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EAE711522494487D00418D64 /* Assets.xcassets */,
+				EAE711542494487D00418D64 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

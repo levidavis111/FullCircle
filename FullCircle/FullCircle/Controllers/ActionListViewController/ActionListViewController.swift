@@ -69,6 +69,7 @@ class ActionListViewController: UIViewController {
         let tableView = UITableView()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(ActionListTableViewCell.self, forCellReuseIdentifier: "actionListCell")
         return tableView
     }()
     

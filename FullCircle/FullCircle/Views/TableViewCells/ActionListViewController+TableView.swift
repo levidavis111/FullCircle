@@ -14,8 +14,15 @@ extension ActionListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "actionListCell", for: indexPath) as! ActionListTableViewCell
+//        let action = actions[indexPath.row]
         
-        return UITableViewCell()
+        cell.actionNameLabel.text = "action name"
+        cell.orgNameLabel.text = "org name"
+        //TODO: Update image based on action type
+        cell.actionTypeImageView.image = UIImage(named: "BlackLivesMatterLogo")!
+        
+        return cell
     }
     
 }

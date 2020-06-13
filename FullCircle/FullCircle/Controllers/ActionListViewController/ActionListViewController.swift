@@ -74,6 +74,8 @@ class ActionListViewController: UIViewController {
     
     lazy var actionListTableView: UITableView = {
         let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
     

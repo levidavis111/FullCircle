@@ -30,6 +30,8 @@ class ActionListViewController: UIViewController {
         button.setImage(UIImage(systemName: "a.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "a.circle.fill"), for: .selected)
         button.tintColor = .black
+        button.tag = 0
+        button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
     }()
     
@@ -38,6 +40,8 @@ class ActionListViewController: UIViewController {
         button.setImage(UIImage(systemName: "1.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "1.circle.fill"), for: .selected)
         button.tintColor = .black
+        button.tag = 1
+        button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
     }()
     
@@ -46,6 +50,8 @@ class ActionListViewController: UIViewController {
         button.setImage(UIImage(systemName: "2.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "2.circle.fill"), for: .selected)
         button.tintColor = .black
+        button.tag = 2
+        button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
     }()
     
@@ -54,6 +60,8 @@ class ActionListViewController: UIViewController {
         button.setImage(UIImage(systemName: "3.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "3.circle.fill"), for: .selected)
         button.tintColor = .black
+        button.tag = 3
+        button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
     }()
     

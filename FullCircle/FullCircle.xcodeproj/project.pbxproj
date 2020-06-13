@@ -18,6 +18,8 @@
 		EAE7117024945FDA00418D64 /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */; };
 		EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117124945FEB00418D64 /* ActionListViewController.swift */; };
 		EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117324945FF400418D64 /* ActionDetailViewController.swift */; };
+		EAE7117A249463B400418D64 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE71179249463B400418D64 /* Organization.swift */; };
+		EAE7117C249463CA00418D64 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117B249463CA00418D64 /* Action.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
 		EAE7117124945FEB00418D64 /* ActionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListViewController.swift; sourceTree = "<group>"; };
 		EAE7117324945FF400418D64 /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
+		EAE71179249463B400418D64 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
+		EAE7117B249463CA00418D64 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE71175249461FA00418D64 /* App Lifecycle */,
+				EAE71178249463A500418D64 /* Models */,
 				EAE711762494623700418D64 /* Controllers */,
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
 				EAE711772494626E00418D64 /* Supporting Files */,
@@ -133,6 +138,15 @@
 				EAE711522494487D00418D64 /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAE71178249463A500418D64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EAE71179249463B400418D64 /* Organization.swift */,
+				EAE7117B249463CA00418D64 /* Action.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
+				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
+				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7117024945FDA00418D64 /* OrgDetailViewController.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,

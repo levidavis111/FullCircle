@@ -32,3 +32,4 @@ enum ActionType: String {
     case medium
     case hard
 }
+

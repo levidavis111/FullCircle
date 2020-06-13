@@ -23,29 +23,52 @@ class ActionListViewController: UIViewController {
         return searchBar
     }()
     
+    lazy var levelLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Choose level of engagement"
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
+    
     //TODO: Update temporary icons
+    lazy var allButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "a.circle"), for: .normal)
+        button.setImage(UIImage(systemName: "a.circle.fill"), for: .selected)
+        button.tintColor = .black
+        return button
+    }()
+    
     lazy var easyButton: UIButton = {
         let button = UIButton()
-        button.imageView?.image = UIImage(named: "1.circle")
+        button.setImage(UIImage(systemName: "1.circle"), for: .normal)
+        button.setImage(UIImage(systemName: "1.circle.fill"), for: .selected)
+        button.tintColor = .black
         return button
     }()
     
     lazy var mediumButton: UIButton = {
         let button = UIButton()
-        button.imageView?.image = UIImage(named: "2.circle")
+        button.setImage(UIImage(systemName: "2.circle"), for: .normal)
+        button.setImage(UIImage(systemName: "2.circle.fill"), for: .selected)
+        button.tintColor = .black
         return button
     }()
     
     lazy var hardButton: UIButton = {
         let button = UIButton()
-        button.imageView?.image = UIImage(named: "3.circle")
+        button.setImage(UIImage(systemName: "3.circle"), for: .normal)
+        button.setImage(UIImage(systemName: "3.circle.fill"), for: .selected)
+        button.tintColor = .black
         return button
     }()
     
     lazy var difficultyButtonStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [easyButton, mediumButton, hardButton])
+        let stackView = UIStackView(arrangedSubviews: [allButton, easyButton, mediumButton, hardButton])
         stackView.alignment = .center
         stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
         return stackView
     }()
     

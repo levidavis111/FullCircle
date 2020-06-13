@@ -18,8 +18,8 @@ class HomeTabBarController: UITabBarController {
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        actionListVC.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "smallcircl.circle"), tag: 0)
+        
+        actionListVC.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "smallcircle.circle"), tag: 0)
         orgListVC.tabBarItem = UITabBarItem(title: "Organizations", image: UIImage(systemName: "person.3"), tag: 1)
         
         self.viewControllers = [actionListVC, orgListVC]

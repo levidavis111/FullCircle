@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Action {
+struct Action: Codable {
     let name: String
     let description: String
     let organization: Organization
@@ -27,7 +27,7 @@ struct Action {
     
 }
 
-enum ActionType: String {
+enum ActionType: String, Codable {
     case easy
     case medium
     case hard

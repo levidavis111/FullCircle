@@ -10,21 +10,22 @@ import UIKit
 
 class HomeTabBarController: UITabBarController {
 
+    // MARK: - Internal Properties
+    var actionListVC = ActionListViewController()
+    var orgListVC = OrgListViewController()
+    // TODO: Add profileVC
+    
+    // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // NOTE: Temporary Icons
+        actionListVC.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "smallcircle.circle"), tag: 0)
+        orgListVC.tabBarItem = UITabBarItem(title: "Organizations", image: UIImage(systemName: "person.3"), tag: 1)
+        
+        self.viewControllers = [actionListVC, orgListVC]
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

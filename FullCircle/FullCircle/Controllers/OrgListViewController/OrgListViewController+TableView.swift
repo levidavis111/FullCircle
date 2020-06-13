@@ -15,7 +15,9 @@ extension OrgListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orgListCell", for: indexPath) as! OrgListTableViewCell
+        let organization = organizations[indexPath.row]
         
+        //TODO: populate cell based on organization properties
         cell.orgNameLabel.text = "test"
         
         return cell

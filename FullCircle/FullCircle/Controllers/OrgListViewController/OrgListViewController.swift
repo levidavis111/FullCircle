@@ -10,6 +10,7 @@ import UIKit
 
 class OrgListViewController: UIViewController {
     
+    //MARK: - UI Objects
     lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         return searchBar
@@ -23,6 +24,10 @@ class OrgListViewController: UIViewController {
         return tableView
     }()
     
+    //MARK: - Internal Properties
+    var organizations = [Organization]()
+    
+    //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow

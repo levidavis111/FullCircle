@@ -18,7 +18,7 @@ extension OrgListViewController: UITableViewDataSource {
         let organization = organizations[indexPath.row]
         
         cell.orgNameLabel.text = organization.name
-        cell.orgDetailLabel.text = "\(organization.borough)   \(organization.type)"
+        cell.orgDetailLabel.text = "\(organization.borough.rawValue)   \(organization.type)"
         cell.orgLogoImageView.image = UIImage(named: organization.logoString)
         
         return cell

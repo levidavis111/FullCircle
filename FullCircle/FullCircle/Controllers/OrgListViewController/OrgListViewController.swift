@@ -25,7 +25,7 @@ class OrgListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
-    var organizations = [Organization]()
+    var organizations = Organization.allOrganizations
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {

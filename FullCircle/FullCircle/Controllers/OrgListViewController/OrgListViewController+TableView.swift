@@ -10,20 +10,19 @@ import UIKit
 
 extension OrgListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return organizations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orgListCell", for: indexPath) as! OrgListTableViewCell
         let organization = organizations[indexPath.row]
         
-        //TODO: populate cell based on organization properties
-        cell.orgNameLabel.text = "test"
+        cell.orgNameLabel.text = organization.name
+        cell.orgDetailLabel.text = "\(organization.borough)   \(organization.type)"
+        cell.orgLogoImageView.image = UIImage(named: organization.logoString)
         
         return cell
     }
-    
-    
     
 }
 

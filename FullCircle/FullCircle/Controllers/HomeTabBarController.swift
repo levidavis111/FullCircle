@@ -19,6 +19,7 @@ class HomeTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // NOTE: Temporary Icons
         actionListVC.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "smallcircle.circle"), tag: 0)
         orgListVC.tabBarItem = UITabBarItem(title: "Organizations", image: UIImage(systemName: "person.3"), tag: 1)
         

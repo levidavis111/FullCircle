@@ -217,9 +217,9 @@
 		EAE7117D249463FB00418D64 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EAE7118524953A8300418D64 /* TableViewCells */,
 				48B4CA4124952A10007B621E /* Cells */,
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
-				EAE7118524953A8300418D64 /* TableViewCells */,
 				48B4CA372495292C007B621E /* OrgDetail.storyboard */,
 			);
 			path = Views;
@@ -238,8 +238,7 @@
 		EAE7118524953A8300418D64 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */,
-				EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */,
+				EAE7118D24956F2F00418D64 /* OrgListTVCell */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -252,6 +251,15 @@
 				EAE7118B24956EAB00418D64 /* ActionListViewController+TableView.swift */,
 			);
 			path = ActionListViewController;
+			sourceTree = "<group>";
+		};
+		EAE7118D24956F2F00418D64 /* OrgListTVCell */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */,
+				EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */,
+			);
+			path = OrgListTVCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

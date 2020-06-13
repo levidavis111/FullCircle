@@ -2,29 +2,54 @@
 //  OrgDetailViewController.swift
 //  FullCircle
 //
-//  Created by Sunni Tang on 6/12/20.
+//  Created by Aishat Olowoshile on 6/13/20.
 //  Copyright © 2020 FullCircle. All rights reserved.
 //
 
 import UIKit
+import CellDataCoupler
 
 class OrgDetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    @IBOutlet weak var tableView: UITableView!
+    var tableSource: TableSource?
+    
+    //Initializer
+    static func create() -> OrgDetailViewController {
+        let vc = UIStoryboard(name: "OrgDetail", bundle: nil).instantiateViewController(withIdentifier: "OrgDetailViewController") as! OrgDetailViewController
+        return vc
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+        setupTableSource()
     }
-    */
-
+    
+    //Setup
+    func setupUI() {
+        
+    }
+    
+    func setupTableSource() {
+        tableSource = TableSource(with: tableView)
+    }
 }
+
+extension OrgDetailViewController {
+    func displayItem() {
+        var sections = [CellCouplerSection]()
+        
+        var couplers = [BaseCellCoupler]()
+        let info = OrgDetailCellInfo(title: "Example")
+        let coupler = CellCoupler(OrgDetailCell.self, info, didSelect: { [weak self] (_) in
+            // TODO: Handle selection
+        })
+        couplers.append(coupler)
+        sections.append(CellCouplerSection(couplers: couplers))
+        
+        tableSource?.set(sections: sections)
+    }
+}
+

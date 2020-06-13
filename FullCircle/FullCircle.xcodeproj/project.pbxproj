@@ -184,8 +184,7 @@
 			children = (
 				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
 				EAE7118224953A4E00418D64 /* OrgListViewController */,
-				EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */,
-				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
+				EAE7118824955ED400418D64 /* ActionListViewController */,
 				48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
 			);
@@ -239,6 +238,14 @@
 				EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EAE7118824955ED400418D64 /* ActionListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
+			);
+			path = ActionListViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,7 +428,6 @@
 				EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */,
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */,
-				EAE7117024945FDA00418D64 /* OrgDetailViewController.swift in Sources */,
 				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,
 				48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */,

@@ -11,15 +11,28 @@ import UIKit
 extension ActionListTableViewCell {
     
     func addSubviews() {
+        self.addSubview(saveActionButton)
         self.addSubview(actionTypeImageView)
         self.addSubview(actionNameLabel)
         self.addSubview(orgNameLabel)
     }
     
     func addConstraints() {
+        setSaveActionButtonConstraints()
         setActionTypeImageViewConstraints()
         setActionNameLabelConstraints()
         setOrgNameLabelConstraints()
+    }
+    
+    private func setSaveActionButtonConstraints() {
+        saveActionButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            saveActionButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            saveActionButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+            saveActionButton.widthAnchor.constraint(equalToConstant: 30),
+            saveActionButton.heightAnchor.constraint(equalToConstant: 30)
+        ])
     }
     
     private func setActionTypeImageViewConstraints() {
@@ -27,7 +40,7 @@ extension ActionListTableViewCell {
         
         NSLayoutConstraint.activate([
             actionTypeImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            actionTypeImageView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+            actionTypeImageView.rightAnchor.constraint(equalTo: saveActionButton.leftAnchor, constant: -5),
             actionTypeImageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8),
             actionTypeImageView.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8)
 

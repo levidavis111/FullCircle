@@ -34,6 +34,12 @@ class ActionListTableViewCell: UITableViewCell {
         return imageView
     }()
     
+    lazy var saveActionButton: UIButton = {
+        let button = UIButton()
+        button.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+        return button
+    }()
+    
     //TODO: Add Follow button for users
     
     //MARK: - Initializers

@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711492494487A00418D64 /* AppDelegate.swift */; };
 		EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114B2494487A00418D64 /* SceneDelegate.swift */; };
-		EAE7114E2494487A00418D64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114D2494487A00418D64 /* ViewController.swift */; };
 		EAE711512494487A00418D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE7114F2494487A00418D64 /* Main.storyboard */; };
 		EAE711532494487D00418D64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE711522494487D00418D64 /* Assets.xcassets */; };
 		EAE711562494487D00418D64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE711542494487D00418D64 /* LaunchScreen.storyboard */; };
 		EAE711612494487D00418D64 /* FullCircleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711602494487D00418D64 /* FullCircleTests.swift */; };
+		EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */; };
+		EAE7116E24945FCD00418D64 /* OrgListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7116D24945FCD00418D64 /* OrgListViewController.swift */; };
+		EAE7117024945FDA00418D64 /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */; };
+		EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117124945FEB00418D64 /* ActionListViewController.swift */; };
+		EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117324945FF400418D64 /* ActionDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +34,6 @@
 		EAE711462494487A00418D64 /* FullCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711492494487A00418D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE7114B2494487A00418D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EAE7114D2494487A00418D64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EAE711502494487A00418D64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EAE711522494487D00418D64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAE711552494487D00418D64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +41,11 @@
 		EAE7115C2494487D00418D64 /* FullCircleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FullCircleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711602494487D00418D64 /* FullCircleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullCircleTests.swift; sourceTree = "<group>"; };
 		EAE711622494487D00418D64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		EAE7116D24945FCD00418D64 /* OrgListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListViewController.swift; sourceTree = "<group>"; };
+		EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailViewController.swift; sourceTree = "<group>"; };
+		EAE7117124945FEB00418D64 /* ActionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionListViewController.swift; sourceTree = "<group>"; };
+		EAE7117324945FF400418D64 /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +87,13 @@
 		EAE711482494487A00418D64 /* FullCircle */ = {
 			isa = PBXGroup;
 			children = (
+				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
+				EAE7116D24945FCD00418D64 /* OrgListViewController.swift */,
+				EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */,
+				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
+				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
 				EAE711492494487A00418D64 /* AppDelegate.swift */,
 				EAE7114B2494487A00418D64 /* SceneDelegate.swift */,
-				EAE7114D2494487A00418D64 /* ViewController.swift */,
 				EAE7114F2494487A00418D64 /* Main.storyboard */,
 				EAE711522494487D00418D64 /* Assets.xcassets */,
 				EAE711542494487D00418D64 /* LaunchScreen.storyboard */,
@@ -200,9 +212,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAE7114E2494487A00418D64 /* ViewController.swift in Sources */,
+				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
+				EAE7117024945FDA00418D64 /* OrgDetailViewController.swift in Sources */,
+				EAE7116C24945FAA00418D64 /* HomeTabBarController.swift in Sources */,
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,
+				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
+				EAE7116E24945FCD00418D64 /* OrgListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

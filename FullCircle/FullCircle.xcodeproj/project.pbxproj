@@ -20,6 +20,8 @@
 		EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117324945FF400418D64 /* ActionDetailViewController.swift */; };
 		EAE7117A249463B400418D64 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE71179249463B400418D64 /* Organization.swift */; };
 		EAE7117C249463CA00418D64 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117B249463CA00418D64 /* Action.swift */; };
+		EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */; };
+		EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		EAE7117324945FF400418D64 /* ActionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionDetailViewController.swift; sourceTree = "<group>"; };
 		EAE71179249463B400418D64 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		EAE7117B249463CA00418D64 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+TableView.swift"; sourceTree = "<group>"; };
+		EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 			children = (
 				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
 				EAE7116D24945FCD00418D64 /* OrgListViewController.swift */,
+				EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */,
+				EAE7117E249535BD00418D64 /* OrgListViewController+TableView.swift */,
 				EAE7116F24945FDA00418D64 /* OrgDetailViewController.swift */,
 				EAE7117124945FEB00418D64 /* ActionListViewController.swift */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
@@ -259,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE7117224945FEB00418D64 /* ActionListViewController.swift in Sources */,
+				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
@@ -267,6 +274,7 @@
 				EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */,
 				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
 				EAE7116E24945FCD00418D64 /* OrgListViewController.swift in Sources */,
+				EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

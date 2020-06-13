@@ -74,7 +74,7 @@ class ActionListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
-//    var actions = [Action]()
+    var actions = Action.allActions
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {

@@ -10,17 +10,17 @@ import UIKit
 
 extension ActionListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return actions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "actionListCell", for: indexPath) as! ActionListTableViewCell
-//        let action = actions[indexPath.row]
+        let action = actions[indexPath.row]
         
-        cell.actionNameLabel.text = "action name"
-        cell.orgNameLabel.text = "org name"
+        cell.actionNameLabel.text = action.name
+        cell.orgNameLabel.text = action.organization.name
         //TODO: Update image based on action type
-        cell.actionTypeImageView.image = UIImage(named: "BlackLivesMatterLogo")!
+        cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
         
         return cell
     }

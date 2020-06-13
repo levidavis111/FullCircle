@@ -14,8 +14,11 @@ extension OrgListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "orgListCell", for: indexPath) as! OrgListTableViewCell
         
-        return UITableViewCell()
+        cell.orgNameLabel.text = "test"
+        
+        return cell
     }
     
     

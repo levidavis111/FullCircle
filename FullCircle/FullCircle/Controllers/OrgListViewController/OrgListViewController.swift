@@ -17,6 +17,9 @@ class OrgListViewController: UIViewController {
     
     lazy var orgListTableView: UITableView = {
         let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(OrgListTableViewCell.self, forCellReuseIdentifier: "orgListCell")
         return tableView
     }()
     

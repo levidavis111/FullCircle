@@ -82,7 +82,11 @@ class ActionListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
-    var actions = Action.allActions
+    var actions = Action.allActions {
+        didSet {
+            actionListTableView.reloadData()
+        }
+    }
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {

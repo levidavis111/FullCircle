@@ -110,6 +110,7 @@
 			children = (
 				EAE711492494487A00418D64 /* AppDelegate.swift */,
 				EAE7114B2494487A00418D64 /* SceneDelegate.swift */,
+				EAE711542494487D00418D64 /* LaunchScreen.storyboard */,
 			);
 			path = "App Lifecycle";
 			sourceTree = "<group>";
@@ -130,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				EAE711522494487D00418D64 /* Assets.xcassets */,
-				EAE711542494487D00418D64 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

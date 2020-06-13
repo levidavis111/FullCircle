@@ -85,8 +85,8 @@ class ActionListViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         
-//        addSubviews()
-//        addConstraints()
+        addSubviews()
+        addConstraints()
         
     }
     

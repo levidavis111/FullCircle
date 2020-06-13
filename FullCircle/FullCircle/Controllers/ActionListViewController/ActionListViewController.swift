@@ -10,21 +10,59 @@ import UIKit
 
 class ActionListViewController: UIViewController {
 
+    /*
+     - Icons for action types to filter through actions (tags)
+     - What org (ex: BLM NY)
+     - Type of action (colored label? icon. ex: Telephone icon)
+     - Name of action (ex: "Call Rep Thomas") - save extended description for DVC
+     */
+    
+    //MARK: - UI Objects
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        return searchBar
+    }()
+    
+    lazy var easyButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    lazy var mediumButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    lazy var hardButton: UIButton = {
+        let button = UIButton()
+        return button
+    }()
+    
+    lazy var difficultyButtonStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [easyButton, mediumButton, hardButton])
+        stackView.alignment = .center
+        stackView.axis = .horizontal
+        return stackView
+    }()
+    
+    lazy var actionListTableView: UITableView = {
+        let tableView = UITableView()
+        return tableView
+    }()
+    
+    //MARK: - Internal Properties
+//    var actions = [Action]()
+    
+    //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .red
+        
+//        addSubviews()
+//        addConstraints()
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

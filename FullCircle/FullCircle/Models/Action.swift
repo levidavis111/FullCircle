@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Action: Codable {
+class Action: Codable {
     let name: String
     let description: String
     let organization: Organization
@@ -17,6 +17,17 @@ struct Action: Codable {
     let actionURL: String
     let iconString: String//Stored in Assets folder
     var isSaved: Bool
+    
+    init(name: String, description: String, organization: Organization, type: ActionType, location: String, actionURL: String, iconString: String, isSaved: Bool) {
+        self.name = name
+        self.description = description
+        self.organization = organization
+        self.type = type
+        self.location = location
+        self.actionURL = actionURL
+        self.iconString = iconString
+        self.isSaved = isSaved
+    }
 }
 
 enum ActionType: String, Codable {

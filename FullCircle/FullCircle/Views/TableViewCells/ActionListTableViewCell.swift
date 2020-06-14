@@ -32,8 +32,9 @@ class ActionListTableViewCell: UITableViewCell {
     //TODO: Add image logos for action type i.e. telephone or email
     lazy var actionTypeImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
+//        imageView.backgroundColor = .blue
         imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = FCDesign.red
         imageView.clipsToBounds = true
         return imageView
     }()

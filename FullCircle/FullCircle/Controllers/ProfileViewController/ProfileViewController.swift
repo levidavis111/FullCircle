@@ -52,8 +52,8 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .red
         
-        //            addSubviews()
-        //            addConstraints()
+        addSubviews()
+        addConstraints()
         
     }
     

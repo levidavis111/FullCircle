@@ -22,16 +22,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-bt-Ejh">
-                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
                                         <state key="normal" title="Phone"/>
+                                        <connections>
+                                            <action selector="didTapPhoneButton:" destination="OS9-An-dqc" eventType="touchUpInside" id="twq-U9-QjX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eJ-ap-Bw6">
-                                        <rect key="frame" x="124.5" y="0.0" width="104" height="30"/>
+                                        <rect key="frame" x="93.5" y="0.0" width="73" height="30"/>
                                         <state key="normal" title="Email"/>
+                                        <connections>
+                                            <action selector="didTapEmailButton:" destination="OS9-An-dqc" eventType="touchUpInside" id="F5X-6m-g7H"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-lc-fNB">
-                                        <rect key="frame" x="248.5" y="0.0" width="104.5" height="30"/>
+                                        <rect key="frame" x="186.5" y="0.0" width="73.5" height="30"/>
                                         <state key="normal" title="Link"/>
+                                        <connections>
+                                            <action selector="didTapLinkButton:" destination="OS9-An-dqc" eventType="touchUpInside" id="u0v-55-L1U"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fv-Aj-sGK">
+                                        <rect key="frame" x="280" y="0.0" width="73" height="30"/>
+                                        <state key="normal" title="Message"/>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -48,6 +61,12 @@
                     <constraint firstItem="l6k-ff-fBg" firstAttribute="leading" secondItem="YRT-OZ-9gz" secondAttribute="leading" constant="12" id="xqM-0Z-hzi"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="emailButton" destination="6eJ-ap-Bw6" id="h1G-Od-AZy"/>
+                <outlet property="linkButton" destination="xzL-lc-fNB" id="VxU-oH-4Vw"/>
+                <outlet property="mapView" destination="C4v-Nj-4M3" id="voE-bf-6cj"/>
+                <outlet property="phoneButton" destination="PWG-bt-Ejh" id="FBb-nH-1Vm"/>
+            </connections>
             <point key="canvasLocation" x="-69.599999999999994" y="-35.082458770614693"/>
         </tableViewCell>
     </objects>

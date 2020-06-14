@@ -7,15 +7,91 @@
 //
 
 import UIKit
+import MapKit
 
 struct OrgDetailContactCellData {
-    let param1: String
-    let param2: Int
+     let phoneInfo: String?
+     let emailInfo: String?
+     let linkInfo: String?
+    let locationCoordinates: CLLocationCoordinate2D?
 }
 
-class OrgDetailContactCell: BaseTableViewCell<OrgDetailContactCellData> {
+class OrgDetailContactCell: BaseTableViewCell<OrgDetailContactCellData>, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    @IBOutlet weak var phoneButton: UIButton!
+    @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var linkButton: UIButton!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    let authorizationStatus = CLLocationManager.authorizationStatus()
+    let regionRadius: CLLocationDistance = 1000
     
     override func setup() {
-        //TODO Set up the cell
+        mapView.delegate = self
+        locationManager.delegate = self
+    }
+    
+    @IBAction func didTapPhoneButton(_ sender: Any) {
+        callNumber()
+    }
+    
+    @IBAction func didTapEmailButton(_ sender: Any) {
+        openEmailApp()
+    }
+    
+    @IBAction func didTapLinkButton(_ sender: Any) {
+        openWebsite()
+    }
+    
+}
+
+
+extension OrgDetailContactCell {
+    private func callNumber() {
+        guard let number = info?.phoneInfo else { return }
+        if let url = URL(string: "telprompt://\(number)") {
+            let application = UIApplication.shared
+            guard application.canOpenURL(url) else {
+                return
+            }
+            application.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func openEmailApp() {
+        guard let emailAddress = info?.emailInfo else { return }
+        if let emailURL = URL(string: "mailto:\(emailAddress)"), UIApplication.shared.canOpenURL(emailURL)
+        {
+            UIApplication.shared.open(emailURL, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func openWebsite() {
+        guard let websiteAddress = info?.linkInfo else { return }
+        guard let url = URL(string: websiteAddress) else { return }
+        
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
+    private func configureLocationServices() {
+        if authorizationStatus == .notDetermined {
+            locationManager.requestAlwaysAuthorization()
+        } else {
+            return
+        }
+    }
+    
+     private func centerMapOnUserLocation() {
+        guard let coordinate = info?.locationCoordinates else { return  }
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
+    
+    internal func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        centerMapOnUserLocation()
     }
 }
+

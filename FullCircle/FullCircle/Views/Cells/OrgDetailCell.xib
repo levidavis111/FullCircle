@@ -24,7 +24,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decription" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVc-Tc-fSm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decription" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVc-Tc-fSm">
                                 <rect key="frame" x="0.0" y="40" width="352" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -40,6 +40,10 @@
                     <constraint firstAttribute="trailing" secondItem="8RZ-n3-eLt" secondAttribute="trailing" constant="12" id="thH-OE-iun"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="JVc-Tc-fSm" id="aYb-4H-fcU"/>
+                <outlet property="titleLabel" destination="I1a-Rr-3IV" id="tmy-RO-vUK"/>
+            </connections>
             <point key="canvasLocation" x="-70.400000000000006" y="-91.754122938530742"/>
         </tableViewCell>
     </objects>

@@ -159,6 +159,14 @@
 			path = ProfileViewController;
 			sourceTree = "<group>";
 		};
+		EA2B42C5249679D600136D4F /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				EA2B42C32496764700136D4F /* FCDesign.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
 		EAE7113D2494487A00418D64 = {
 			isa = PBXGroup;
 			children = (
@@ -231,7 +239,7 @@
 				EAE711522494487D00418D64 /* Assets.xcassets */,
 				48B331D424953095007080C7 /* TableSource.swift */,
 				48B331D624953254007080C7 /* BaseTableViewCell.swift */,
-				EA2B42C32496764700136D4F /* FCDesign.swift */,
+				EA2B42C5249679D600136D4F /* Design */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";

@@ -32,3 +32,4 @@ var allActions = [
     Action(name: "Call Governor Cuomo", description: "Call Governor Cuomo's office and demand that he release a full education-reform plan. 1-518-474-8390.", organization: Organization.allOrganizations[3], type: .medium, location: "N/A", actionURL: "N/A", iconString: "TK", isSaved: false),
     Action(name: "Sign our petition", description: "We have a petition on change.org, please take the time to sign it and voice your support", organization: Organization.allOrganizations[4], type: .easy, location: "N/A", actionURL: "change.org", iconString: "TK", isSaved: false)
 ]
+

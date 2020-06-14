@@ -13,7 +13,7 @@ class ActionListTableViewCell: UITableViewCell {
     //MARK: - UI Objects
     let noActionLabel: UILabel = {
         let label = UILabel()
-        label.text = "No saved actions... browse the Actions List to start making a change!"
+        label.text = "No saved actions... browse the Actions List to start making a difference!"
         label.textAlignment = .center
         label.textColor = .gray
         label.numberOfLines = 0

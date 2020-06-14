@@ -62,13 +62,30 @@ extension OrgDetailViewController {
         let orgNameAndDescripCell = CellCoupler(OrgDetailCell.self, orgNameAndDescrip)
         couplers.append(orgNameAndDescripCell)
         
-//        let orgAction = OrgDetailCellInfo(title: "Example")
-//        let orgActionCell = CellCoupler(OrgDetailCell.self, orgAction, didSelect: { [weak self] (_) in
-//            // TODO: Handle selection
-//        })
-//        couplers.append(orgActionCell)
+        //Donate
+        let donateToOrgInfo = OrgDetailButtonCellData(donationLink: organization.donateURL)
+        let buttonActioncell = CellCoupler(OrgDetailButtonCell.self, donateToOrgInfo)
+        couplers.append(buttonActioncell)
         
-    
+        //Subtitle
+        let orgActionTitleInfo = OrgDetailActionListCellData(title: "Contact Us")
+        let orgActionTitleCell = CellCoupler(OrgDetailActionListCell.self, orgActionTitleInfo)
+         couplers.append(orgActionTitleCell)
+        
+        
+        //Contact
+        let orgCoordinates = getCoordinates(forAddress: organization.address)
+        let orgContactInfo = OrgDetailContactCellData(phoneInfo: organization.phone, emailInfo: organization.email, linkInfo: organization.website, locationCoordinates: orgCoordinates)
+        let orgContactInfoCell = CellCoupler(OrgDetailContactCell.self, orgContactInfo)
+        couplers.append(orgContactInfoCell)
+        
+        //Subtitle
+        let orgActionSubTitleInfo = OrgDetailActionListCellData(title: "Available Actions")
+        let orgActionSubTitleCell = CellCoupler(OrgDetailActionListCell.self, orgActionSubTitleInfo)
+        couplers.append(orgActionSubTitleCell)
+       
+        
+        //Actions
         for action in organization.actions {
             //Action
             let actionListCell = tableView.dequeueReusableCell(withIdentifier: "actionListCell") as! ActionListTableViewCell
@@ -106,21 +123,6 @@ extension OrgDetailViewController {
             
             //couplers.append(BaseCellCoupler(cellType: actionListCell))
         }
-        
-
-        
-        //contact
-        let orgCoordinates = getCoordinates(forAddress: organization.address)
-        let orgContactInfo = OrgDetailContactCellData(phoneInfo: organization.phone, emailInfo: organization.email, linkInfo: organization.website, locationCoordinates: orgCoordinates)
-        let orgContactInfoCell = CellCoupler(OrgDetailContactCell.self, orgContactInfo)
-        couplers.append(orgContactInfoCell)
-        
-        
-        let donateToOrgInfo = OrgDetailButtonCellData(donationLink: organization.donateURL)
-        let buttonActioncell = CellCoupler(OrgDetailButtonCell.self, donateToOrgInfo)
-        couplers.append(buttonActioncell)
-        
-        //sections.append(CellCouplerSection(couplers: couplers))
         
         tableSource?.set(couplers: couplers)
     }

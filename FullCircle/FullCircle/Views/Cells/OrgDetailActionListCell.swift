@@ -9,15 +9,15 @@
 import UIKit
 
 struct OrgDetailActionListCellData {
-    let param1: String
-    let param2: Int
+    let title: String?
 }
 
 class OrgDetailActionListCell: BaseTableViewCell<OrgDetailActionListCellData> {
     
     @IBOutlet weak var titleLabel: UILabel!
+    
     override func setup() {
-        //TODO Set up the cell
+        titleLabel.text = info?.title ?? ""
     }
 }
 

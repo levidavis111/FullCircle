@@ -12,13 +12,13 @@ extension ActionListViewController {
     @objc func levelButtonPressed(button: UIButton) {
         switch button.tag {
         case 0:
-            actions = Action.allActions
+            actions = allActions
         case 1:
-            actions = Action.allActions.filter { $0.type == .easy }
+            actions = allActions.filter { $0.type == .easy }
         case 2:
-            actions = Action.allActions.filter { $0.type == .medium }
+            actions = allActions.filter { $0.type == .medium }
         case 3:
-            actions = Action.allActions.filter { $0.type == .hard }
+            actions = allActions.filter { $0.type == .hard }
         default:
             break
         }

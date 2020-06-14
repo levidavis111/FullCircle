@@ -39,9 +39,9 @@ extension ProfileViewController {
         
         NSLayoutConstraint.activate([
             userNameLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            userNameLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            userNameLabel.topAnchor.constraint(equalTo: searchBar.bottomAnchor),
-            userNameLabel.heightAnchor.constraint(equalToConstant: 40)
+            userNameLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
+            userNameLabel.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 50),
+            userNameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
     
@@ -50,9 +50,9 @@ extension ProfileViewController {
         
         NSLayoutConstraint.activate([
             userInfoLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            userInfoLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            userInfoLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
             userInfoLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor),
-            userInfoLabel.heightAnchor.constraint(equalToConstant: 80)
+            userInfoLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

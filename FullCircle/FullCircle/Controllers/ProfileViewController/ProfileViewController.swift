@@ -10,23 +10,15 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     //MARK: - UI Objects
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        return searchBar
-    }()
+    lazy var searchBar = FCSearchBar()
     
-    let userNameLabel: UILabel = {
-        let label = UILabel()
+    let userNameLabel: FCSubHeaderLabel = {
+        let label = FCSubHeaderLabel()
         label.text = "User4BlackLives"
-        label.numberOfLines = 0
         return label
     }()
     
-    lazy var userInfoLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        return label
-    }()
+    lazy var userInfoLabel = FCBodyLabel()
     
     lazy var actionListTableView: UITableView = {
         let tableView = UITableView()
@@ -34,6 +26,7 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.register(ActionListTableViewCell.self, forCellReuseIdentifier: "actionListCell")
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
@@ -47,24 +40,27 @@ class ProfileViewController: UIViewController {
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = FCDesign.medGrey
+        self.navigationItem.title = "FullCircle"
+
         
         addSubviews()
         addConstraints()
-        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         actionListTableView.reloadData()
         updateUserInfoLabel()
+
     }
     
     func updateUserInfoLabel() {
         savedActions = allActions.filter { $0.isSaved == true }
         userInfoLabel.text = """
-        Saved actions: \(savedActions.count)
-        Actions taken: 0
+        \(savedActions.count) saved actions
+        0 actions taken
         """
     }
 }

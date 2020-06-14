@@ -17,7 +17,7 @@ extension ActionListViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "actionListCell", for: indexPath) as! ActionListTableViewCell
         let action = actions[indexPath.row]
         
-        cell.actionNameLabel.text = action.name.uppercased()
+        cell.actionNameLabel.text = action.name
         cell.orgNameLabel.text = action.organization.name
         //TODO: Update image based on action type
         cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
@@ -25,8 +25,10 @@ extension ActionListViewController: UITableViewDataSource {
         switch action.isSaved {
         case true:
             cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+            cell.saveActionButton.tintColor = FCDesign.red
         default:
             cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+            cell.saveActionButton.tintColor = FCDesign.darkGrey
         }
         
         

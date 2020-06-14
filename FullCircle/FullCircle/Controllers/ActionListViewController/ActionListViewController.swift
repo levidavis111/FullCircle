@@ -78,6 +78,7 @@ class ActionListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(ActionListTableViewCell.self, forCellReuseIdentifier: "actionListCell")
+        tableView.separatorStyle = .none
         return tableView
     }()
     

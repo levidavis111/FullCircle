@@ -11,18 +11,22 @@ import UIKit
 extension ActionListTableViewCell {
     
     func addSubviews() {
+        self.addSubview(infoView)
         self.addSubview(noActionLabel)
         self.addSubview(saveActionButton)
-        self.addSubview(actionTypeImageView)
-        self.addSubview(actionNameLabel)
-        self.addSubview(orgNameLabel)
+        infoView.addSubview(actionTypeImageView)
+        infoView.addSubview(actionNameLabel)
+        infoView.addSubview(withLabel)
+        infoView.addSubview(orgNameLabel)
     }
     
     func addConstraints() {
         setNoActionLabel()
         setSaveActionButtonConstraints()
+        setInfoViewConstraints()
         setActionTypeImageViewConstraints()
         setActionNameLabelConstraints()
+        setWithLabelConstraints()
         setOrgNameLabelConstraints()
     }
     
@@ -33,7 +37,7 @@ extension ActionListTableViewCell {
             noActionLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             noActionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             noActionLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            noActionLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
+            noActionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30),
         ])
     }
     
@@ -48,14 +52,25 @@ extension ActionListTableViewCell {
         ])
     }
     
+    private func setInfoViewConstraints() {
+        infoView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            infoView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            infoView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
+            infoView.rightAnchor.constraint(equalTo: saveActionButton.leftAnchor, constant: -10),
+            infoView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8),
+        ])
+    }
+    
     private func setActionTypeImageViewConstraints() {
         actionTypeImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            actionTypeImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            actionTypeImageView.rightAnchor.constraint(equalTo: saveActionButton.leftAnchor, constant: -5),
-            actionTypeImageView.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8),
-            actionTypeImageView.widthAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.8)
+            actionTypeImageView.centerYAnchor.constraint(equalTo: infoView.centerYAnchor),
+            actionTypeImageView.rightAnchor.constraint(equalTo: infoView.rightAnchor, constant: -10),
+            actionTypeImageView.heightAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.8),
+            actionTypeImageView.widthAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.8)
 
         ])
     }
@@ -64,10 +79,21 @@ extension ActionListTableViewCell {
         actionNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            actionNameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
-            actionNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -10),
-            actionNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            actionNameLabel.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.6)
+            actionNameLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 10),
+            actionNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -20),
+            actionNameLabel.topAnchor.constraint(equalTo: infoView.topAnchor, constant: 5),
+            actionNameLabel.heightAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.5)
+        ])
+    }
+    
+    private func setWithLabelConstraints() {
+        withLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            withLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 10),
+            withLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -20),
+            withLabel.topAnchor.constraint(equalTo: actionNameLabel.bottomAnchor, constant: 0),
+            withLabel.heightAnchor.constraint(equalToConstant: 15)
         ])
     }
     
@@ -75,10 +101,10 @@ extension ActionListTableViewCell {
         orgNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            orgNameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
-            orgNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -10),
-            orgNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
-            orgNameLabel.topAnchor.constraint(equalTo: actionNameLabel.bottomAnchor, constant: 5),
+            orgNameLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 10),
+            orgNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -20),
+            orgNameLabel.bottomAnchor.constraint(equalTo: infoView.bottomAnchor, constant: -10),
+            orgNameLabel.topAnchor.constraint(equalTo: withLabel.bottomAnchor),
         ])
     }
     

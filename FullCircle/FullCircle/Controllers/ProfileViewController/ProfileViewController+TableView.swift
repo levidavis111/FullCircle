@@ -22,9 +22,7 @@ extension ProfileViewController: UITableViewDataSource {
         
         if savedActions.isEmpty {
             cell.noActionLabel.isHidden = false
-            cell.actionNameLabel.isHidden = true
-            cell.actionTypeImageView.isHidden = true
-            cell.orgNameLabel.isHidden = true
+            cell.infoView.isHidden = true
             cell.saveActionButton.isHidden = true
             
         } else {
@@ -37,7 +35,7 @@ extension ProfileViewController: UITableViewDataSource {
             
             let action = savedActions[indexPath.row]
             
-            cell.actionNameLabel.text = action.name
+            cell.actionNameLabel.text = action.name.uppercased()
             cell.orgNameLabel.text = action.organization.name
             //TODO: Update image based on action type
             cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
@@ -66,7 +64,7 @@ extension ProfileViewController: UITableViewDataSource {
 
 extension ProfileViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 150
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

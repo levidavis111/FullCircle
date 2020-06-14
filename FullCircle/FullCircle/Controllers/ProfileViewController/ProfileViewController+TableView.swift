@@ -28,6 +28,13 @@ extension ProfileViewController: UITableViewDataSource {
             cell.saveActionButton.isHidden = true
             
         } else {
+            cell.noActionLabel.isHidden = true
+            cell.actionNameLabel.isHidden = false
+            cell.actionTypeImageView.isHidden = false
+            cell.orgNameLabel.isHidden = false
+            cell.saveActionButton.isHidden = false
+            
+            
             let action = savedActions[indexPath.row]
             
             cell.actionNameLabel.text = action.name

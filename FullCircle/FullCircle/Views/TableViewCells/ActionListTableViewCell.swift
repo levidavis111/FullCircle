@@ -11,6 +11,8 @@ import UIKit
 class ActionListTableViewCell: UITableViewCell {
     
     //MARK: - UI Objects
+    let infoView = UIView()
+    
     let noActionLabel: FCBodyLabel = {
         let label = FCBodyLabel()
         label.text = "No saved actions... browse the Actions List to start making a difference!"

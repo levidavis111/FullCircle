@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class ActionDetailViewController: UIViewController {
     
@@ -41,6 +42,7 @@ class ActionDetailViewController: UIViewController {
         textView.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 20)
         textView.textColor = .white
         textView.text = self.action.description
+        textView.isUserInteractionEnabled = false
         return textView
     }()
     
@@ -66,7 +68,21 @@ class ActionDetailViewController: UIViewController {
     }
     
     @objc private func takeActionButtonPressed() {
-        
+        sendEmail()
+    }
+    
+    private func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients(["you@yoursite.com"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+
+            present(mail, animated: true)
+        } else {
+            print("Could not send mail")
+            // show failure alert
+        }
     }
     
     private func setExclusionPath() {
@@ -128,4 +144,22 @@ class ActionDetailViewController: UIViewController {
          takeActionButton.widthAnchor.constraint(equalToConstant: 180)].forEach {$0.isActive = true}
     }
 
+}
+
+extension ActionDetailViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        switch result.rawValue {
+        case MFMailComposeResult.cancelled.rawValue:
+            print("Cancelled")
+        case MFMailComposeResult.saved.rawValue:
+            print("Saved")
+        case MFMailComposeResult.sent.rawValue:
+            print("Sent")
+        case MFMailComposeResult.failed.rawValue:
+            print("Error: \(String(describing: error?.localizedDescription))")
+        default:
+            break
+        }
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

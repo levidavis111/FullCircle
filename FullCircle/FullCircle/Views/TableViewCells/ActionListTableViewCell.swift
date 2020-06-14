@@ -37,12 +37,13 @@ class ActionListTableViewCell: UITableViewCell {
     //TODO: Place temp image
     lazy var saveActionButton: UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
         button.addTarget(self, action: #selector(saveActionButtonPressed(_:)), for: .touchUpInside)
         return button
     }()
     
     //TODO: Add Follow button for users
+    
+    var saveAction: (() -> ())?
     
     //MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -67,8 +68,15 @@ class ActionListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     @objc func saveActionButtonPressed(_ sender: UIButton) {
         // Take care of persisting saved actions here
+        if let closure = self.saveAction {
+            closure()
+            if saveActionButton.backgroundImage(for: .normal) == UIImage(systemName: "star.circle") {
+                saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+            } else {
+                saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+            }
+        }
     }
 }

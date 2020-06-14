@@ -72,6 +72,11 @@ class ActionListTableViewCell: UITableViewCell {
         // Take care of persisting saved actions here
         if let closure = self.saveAction {
             closure()
+            if saveActionButton.backgroundImage(for: .normal) == UIImage(systemName: "star.circle") {
+                saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+            } else {
+                saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+            }
         }
     }
 }

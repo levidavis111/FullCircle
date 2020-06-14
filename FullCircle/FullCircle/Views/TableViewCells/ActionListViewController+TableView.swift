@@ -31,7 +31,6 @@ extension ActionListViewController: UITableViewDataSource {
         
         
         cell.saveAction = {
-           // filter through global property
             let index = allActions.firstIndex(where: { $0.name == action.name } )
             allActions[index!].isSaved = allActions[index!].isSaved ? false : true
             print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")

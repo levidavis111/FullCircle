@@ -32,3 +32,4 @@ enum ActionType: String, Codable {
     case medium
     case hard
 }
+

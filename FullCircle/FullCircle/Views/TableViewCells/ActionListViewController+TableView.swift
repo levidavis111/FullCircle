@@ -34,6 +34,18 @@ extension ActionListViewController: UITableViewDataSource {
             let index = allActions.firstIndex(where: { $0.name == action.name } )
             allActions[index!].isSaved = allActions[index!].isSaved ? false : true
             print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")
+            
+//            do {
+//                let savedActions = try ActionPersistenceManager.manager.getSavedActions()
+//
+//                if let index = savedActions.firstIndex(where: { $0.name == action.name }) {
+//                    try ActionPersistenceManager.manager.deleteAction(actions: savedActions, at: index)
+//                } else {
+//                    try ActionPersistenceManager.manager.saveAction(action: action)
+//                }
+//            } catch {
+//                print(error)
+//            }
         }
         
         

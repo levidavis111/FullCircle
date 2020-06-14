@@ -46,7 +46,7 @@ extension ActionListTableViewCell {
         
         NSLayoutConstraint.activate([
             saveActionButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            saveActionButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
+            saveActionButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
             saveActionButton.widthAnchor.constraint(equalToConstant: 30),
             saveActionButton.heightAnchor.constraint(equalToConstant: 30)
         ])

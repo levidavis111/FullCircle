@@ -17,7 +17,7 @@ extension OrgListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orgListCell", for: indexPath) as! OrgListTableViewCell
         let organization = organizations[indexPath.row]
         
-        cell.orgNameLabel.text = organization.name
+        cell.orgNameLabel.text = organization.name.uppercased()
         cell.orgDetailLabel.text = "\(organization.borough.rawValue)   \(organization.type)"
         cell.orgLogoImageView.image = UIImage(named: organization.logoString)
         
@@ -28,7 +28,7 @@ extension OrgListViewController: UITableViewDataSource {
 
 extension OrgListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 200
     }
     
      //Navigation

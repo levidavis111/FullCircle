@@ -17,7 +17,7 @@ extension ActionListViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "actionListCell", for: indexPath) as! ActionListTableViewCell
         let action = actions[indexPath.row]
         
-        cell.actionNameLabel.text = action.name
+        cell.actionNameLabel.text = action.name.uppercased()
         cell.orgNameLabel.text = action.organization.name
         //TODO: Update image based on action type
         cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
@@ -56,7 +56,7 @@ extension ActionListViewController: UITableViewDataSource {
 
 extension ActionListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 150
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

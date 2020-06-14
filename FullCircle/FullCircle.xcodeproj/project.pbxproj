@@ -15,6 +15,7 @@
 		48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */; };
 		6299F0BBDC150CDCC15D9E06 /* Pods_FullCircle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 911D212296111CB0683AD60E /* Pods_FullCircle.framework */; };
 		8642757812D7CA487627A848 /* Pods_FullCircleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58F2F8A4052B182DFF03AE11 /* Pods_FullCircleTests.framework */; };
+		EA2B42BC2495B7DB00136D4F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42BB2495B7DB00136D4F /* ProfileViewController.swift */; };
 		EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711492494487A00418D64 /* AppDelegate.swift */; };
 		EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114B2494487A00418D64 /* SceneDelegate.swift */; };
 		EAE711512494487A00418D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE7114F2494487A00418D64 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		911D212296111CB0683AD60E /* Pods_FullCircle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FullCircle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF64500D599452C845188048 /* Pods-FullCircleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.release.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.release.xcconfig"; sourceTree = "<group>"; };
 		CCE30EF293F3F7F561CD27A0 /* Pods-FullCircleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircleTests.debug.xcconfig"; path = "Target Support Files/Pods-FullCircleTests/Pods-FullCircleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA2B42BB2495B7DB00136D4F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EAE711462494487A00418D64 /* FullCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711492494487A00418D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE7114B2494487A00418D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA2B42BA2495B7C200136D4F /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA2B42BB2495B7DB00136D4F /* ProfileViewController.swift */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		EAE7113D2494487A00418D64 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
+				EA2B42BA2495B7C200136D4F /* ProfileViewController */,
 				EAE7118224953A4E00418D64 /* OrgListViewController */,
 				EAE7118824955ED400418D64 /* ActionListViewController */,
 				48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */,
@@ -469,6 +480,7 @@
 				EAE7118C24956EAB00418D64 /* ActionListViewController+TableView.swift in Sources */,
 				EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */,
 				EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */,
+				EA2B42BC2495B7DB00136D4F /* ProfileViewController.swift in Sources */,
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
 				48B331D524953095007080C7 /* TableSource.swift in Sources */,
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,

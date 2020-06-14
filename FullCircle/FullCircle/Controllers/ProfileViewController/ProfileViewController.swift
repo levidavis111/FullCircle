@@ -52,12 +52,15 @@ class ProfileViewController: UIViewController {
         addSubviews()
         addConstraints()
         
+        title = "FullCircle"
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         actionListTableView.reloadData()
         updateUserInfoLabel()
+
     }
     
     func updateUserInfoLabel() {

@@ -13,6 +13,8 @@ class FCNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         styleNavBar()
+    
+
     }
     
     private func styleNavBar() {
@@ -23,5 +25,6 @@ class FCNavigationController: UINavigationController {
             NSAttributedString.Key.font : FCDesign.headerFont!] as [NSAttributedString.Key : Any]
         navigationBar.titleTextAttributes = textAttributes
         navigationBar.isTranslucent = false
+        
     }
 }

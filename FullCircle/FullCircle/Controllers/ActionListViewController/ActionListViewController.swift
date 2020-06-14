@@ -82,7 +82,7 @@ class ActionListViewController: UIViewController {
     }()
     
     //MARK: - Internal Properties
-    var actions = Action.allActions {
+    var actions = allActions {
         didSet {
             actionListTableView.reloadData()
         }

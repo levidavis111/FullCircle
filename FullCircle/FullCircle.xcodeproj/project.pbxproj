@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48A8295E2496A80D008D9359 /* OrgDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */; };
+		48A8295F2496A80D008D9359 /* OrgDetailImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */; };
 		48B331D524953095007080C7 /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D424953095007080C7 /* TableSource.swift */; };
 		48B331D724953254007080C7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D624953254007080C7 /* BaseTableViewCell.swift */; };
+		48B331DA24967DC6007080C7 /* OrgDetailActionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D824967DC6007080C7 /* OrgDetailActionListCell.swift */; };
+		48B331DB24967DC6007080C7 /* OrgDetailActionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B331D924967DC6007080C7 /* OrgDetailActionListCell.xib */; };
+		48B331DE24967DF5007080C7 /* OrgDetailButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331DC24967DF5007080C7 /* OrgDetailButtonCell.swift */; };
+		48B331DF24967DF5007080C7 /* OrgDetailButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B331DD24967DF5007080C7 /* OrgDetailButtonCell.xib */; };
+		48B331E224967FF0007080C7 /* OrgDetailContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331E024967FEF007080C7 /* OrgDetailContactCell.swift */; };
+		48B331E324967FF0007080C7 /* OrgDetailContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B331E124967FEF007080C7 /* OrgDetailContactCell.xib */; };
 		48B4CA3C2495292C007B621E /* OrgDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48B4CA372495292C007B621E /* OrgDetail.storyboard */; };
 		48B4CA3D2495292C007B621E /* OrgDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B4CA382495292C007B621E /* OrgDetailCell.xib */; };
 		48B4CA3F2495292C007B621E /* OrgDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B4CA3A2495292C007B621E /* OrgDetailCell.swift */; };
@@ -74,8 +82,16 @@
 /* Begin PBXFileReference section */
 		28769A0811DD16EF70F6046C /* Pods-FullCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircle.debug.xcconfig"; path = "Target Support Files/Pods-FullCircle/Pods-FullCircle.debug.xcconfig"; sourceTree = "<group>"; };
 		397BAF6C151D48409376AFF4 /* Pods-FullCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircle.release.xcconfig"; path = "Target Support Files/Pods-FullCircle/Pods-FullCircle.release.xcconfig"; sourceTree = "<group>"; };
+		48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailImageCell.swift; sourceTree = "<group>"; };
+		48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailImageCell.xib; sourceTree = "<group>"; };
 		48B331D424953095007080C7 /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
 		48B331D624953254007080C7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		48B331D824967DC6007080C7 /* OrgDetailActionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailActionListCell.swift; sourceTree = "<group>"; };
+		48B331D924967DC6007080C7 /* OrgDetailActionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailActionListCell.xib; sourceTree = "<group>"; };
+		48B331DC24967DF5007080C7 /* OrgDetailButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailButtonCell.swift; sourceTree = "<group>"; };
+		48B331DD24967DF5007080C7 /* OrgDetailButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailButtonCell.xib; sourceTree = "<group>"; };
+		48B331E024967FEF007080C7 /* OrgDetailContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailContactCell.swift; sourceTree = "<group>"; };
+		48B331E124967FEF007080C7 /* OrgDetailContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailContactCell.xib; sourceTree = "<group>"; };
 		48B4CA372495292C007B621E /* OrgDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrgDetail.storyboard; sourceTree = "<group>"; };
 		48B4CA382495292C007B621E /* OrgDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailCell.xib; sourceTree = "<group>"; };
 		48B4CA3A2495292C007B621E /* OrgDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailCell.swift; sourceTree = "<group>"; };
@@ -147,11 +163,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48B331E42496813D007080C7 /* OrgDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */,
+			);
+			path = OrgDetailViewController;
+			sourceTree = "<group>";
+		};
 		48B4CA4124952A10007B621E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				48B4CA382495292C007B621E /* OrgDetailCell.xib */,
 				48B4CA3A2495292C007B621E /* OrgDetailCell.swift */,
+				48B331D824967DC6007080C7 /* OrgDetailActionListCell.swift */,
+				48B331D924967DC6007080C7 /* OrgDetailActionListCell.xib */,
+				48B331DC24967DF5007080C7 /* OrgDetailButtonCell.swift */,
+				48B331DD24967DF5007080C7 /* OrgDetailButtonCell.xib */,
+				48B331E024967FEF007080C7 /* OrgDetailContactCell.swift */,
+				48B331E124967FEF007080C7 /* OrgDetailContactCell.xib */,
+				48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */,
+				48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -271,11 +303,11 @@
 		EAE711762494623700418D64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				48B331E42496813D007080C7 /* OrgDetailViewController */,
 				EAE7116B24945FAA00418D64 /* HomeTabBarController.swift */,
 				EA2B42BA2495B7C200136D4F /* ProfileViewController */,
 				EAE7118224953A4E00418D64 /* OrgListViewController */,
 				EAE7118824955ED400418D64 /* ActionListViewController */,
-				48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
 				FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */,
 			);
@@ -458,9 +490,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A8295F2496A80D008D9359 /* OrgDetailImageCell.xib in Resources */,
+				48B331E324967FF0007080C7 /* OrgDetailContactCell.xib in Resources */,
+				48B331DF24967DF5007080C7 /* OrgDetailButtonCell.xib in Resources */,
 				EAE711562494487D00418D64 /* LaunchScreen.storyboard in Resources */,
 				EAE711532494487D00418D64 /* Assets.xcassets in Resources */,
 				48B4CA3D2495292C007B621E /* OrgDetailCell.xib in Resources */,
+				48B331DB24967DC6007080C7 /* OrgDetailActionListCell.xib in Resources */,
 				48B4CA3C2495292C007B621E /* OrgDetail.storyboard in Resources */,
 				EAE711512494487A00418D64 /* Main.storyboard in Resources */,
 				EA2B42C824967A1D00136D4F /* WorkSans-Bold.ttf in Resources */,
@@ -557,6 +593,8 @@
 				EA2B42CF24967AD100136D4F /* FCHeaderLabel.swift in Sources */,
 				EA2B42D52496814700136D4F /* FCBodyLabel.swift in Sources */,
 				EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */,
+				48B331E224967FF0007080C7 /* OrgDetailContactCell.swift in Sources */,
+				48B331DA24967DC6007080C7 /* OrgDetailActionListCell.swift in Sources */,
 				EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */,
 				EA2B42BC2495B7DB00136D4F /* ProfileViewController.swift in Sources */,
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
@@ -573,6 +611,7 @@
 				EA2B42C42496764700136D4F /* FCDesign.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
 				FC380B58249566F300DE703D /* PersistenceHelper.swift in Sources */,
+				48A8295E2496A80D008D9359 /* OrgDetailImageCell.swift in Sources */,
 				EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */,
 				EA2B42E12496A00E00136D4F /* FCSearchBar.swift in Sources */,
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
@@ -583,6 +622,7 @@
 				EAE7117424945FF400418D64 /* ActionDetailViewController.swift in Sources */,
 				EAE7116E24945FCD00418D64 /* OrgListViewController.swift in Sources */,
 				EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */,
+				48B331DE24967DF5007080C7 /* OrgDetailButtonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

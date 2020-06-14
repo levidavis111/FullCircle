@@ -20,8 +20,11 @@ class TableSource: CouplerTableSource {
     init(with tableView: UITableView, delegate: TableDelegate? = nil) {
         super.init(with: tableView)
         self.delegate = delegate
-        
+
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = .white
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
+        tableView.separatorStyle = .none
     }
 }

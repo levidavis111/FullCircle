@@ -9,22 +9,54 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    //MARK: - UI Objects
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        return searchBar
+    }()
+    
+    let userNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "User4BlackLives"
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    lazy var userInfoLabel: UILabel = {
+        let label = UILabel()
+        label.text = """
+        Saved actions: \(savedActions.count)
+        Actions Taken: TBD!
+        """
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    lazy var actionListTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(ActionListTableViewCell.self, forCellReuseIdentifier: "actionListCell")
+        return tableView
+    }()
+    
+    //MARK: - Internal Properties
+    var savedActions = allActions.filter { $0.isSaved == true } {
+        didSet {
+            actionListTableView.reloadData()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: - Lifecycle Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .red
+        
+        //            addSubviews()
+        //            addConstraints()
+        
     }
-    */
-
+    
+    
+    
 }

@@ -11,10 +11,7 @@ import UIKit
 class OrgListViewController: UIViewController {
     
     //MARK: - UI Objects
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        return searchBar
-    }()
+    lazy var searchBar = FCSearchBar()
     
     lazy var orgListTableView: UITableView = {
         let tableView = UITableView()

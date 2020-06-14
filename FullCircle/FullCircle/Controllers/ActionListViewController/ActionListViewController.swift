@@ -11,10 +11,7 @@ import UIKit
 class ActionListViewController: UIViewController {
     
     //MARK: - UI Objects
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        return searchBar
-    }()
+    lazy var searchBar = FCSearchBar()
     
     lazy var levelLabel: UILabel = {
         let label = UILabel()

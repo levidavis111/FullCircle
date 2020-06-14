@@ -10,10 +10,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     //MARK: - UI Objects
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        return searchBar
-    }()
+    lazy var searchBar = FCSearchBar()
     
     let userNameLabel: UILabel = {
         let label = UILabel()

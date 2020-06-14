@@ -12,18 +12,13 @@ class ProfileViewController: UIViewController {
     //MARK: - UI Objects
     lazy var searchBar = FCSearchBar()
     
-    let userNameLabel: UILabel = {
-        let label = UILabel()
+    let userNameLabel: FCSubHeaderLabel = {
+        let label = FCSubHeaderLabel()
         label.text = "User4BlackLives"
-        label.numberOfLines = 0
         return label
     }()
     
-    lazy var userInfoLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        return label
-    }()
+    lazy var userInfoLabel = FCBodyLabel()
     
     lazy var actionListTableView: UITableView = {
         let tableView = UITableView()
@@ -64,8 +59,8 @@ class ProfileViewController: UIViewController {
     func updateUserInfoLabel() {
         savedActions = allActions.filter { $0.isSaved == true }
         userInfoLabel.text = """
-        Saved actions: \(savedActions.count)
-        Actions taken: 0
+        \(savedActions.count) saved actions
+        0 actions taken
         """
     }
 }

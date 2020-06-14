@@ -9,12 +9,17 @@
 import UIKit
 
 struct OrgDetailCellInfo {
-    var title: String
+    var title: String?
+    var description: String?
 }
 
 class OrgDetailCell: BaseTableViewCell<OrgDetailCellInfo> {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     override func setup() {
-        //TODO Set up the cell
+        titleLabel.text = info?.title
+        descriptionLabel.text = info?.description
     }
 }

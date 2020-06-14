@@ -11,18 +11,10 @@ import UIKit
 class OrgListTableViewCell: UITableViewCell {
     
     //MARK: - UI Objects
-    let orgNameLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .yellow
-        return label
-    }()
+    let orgNameLabel = FCHeaderLabel()
     
     // Borough, type of org
-    let orgDetailLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .green
-        return label
-    }()
+    let orgDetailLabel = FCSubHeaderLabel()
         
     lazy var orgLogoImageView: UIImageView = {
         let imageView = UIImageView()

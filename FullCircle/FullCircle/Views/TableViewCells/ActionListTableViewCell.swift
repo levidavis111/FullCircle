@@ -21,19 +21,9 @@ class ActionListTableViewCell: UITableViewCell {
         return label
     }()
     
-    let actionNameLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .green
-        label.numberOfLines = 0
-        return label
-    }()
+    let actionNameLabel = FCHeaderLabel()
     
-    let orgNameLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .yellow
-        label.numberOfLines = 0
-        return label
-    }()
+    let orgNameLabel = FCSubHeaderLabel()
 
     //TODO: Add image logos for action type i.e. telephone or email
     lazy var actionTypeImageView: UIImageView = {

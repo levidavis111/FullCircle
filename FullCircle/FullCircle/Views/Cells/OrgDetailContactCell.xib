@@ -19,37 +19,45 @@
                         <rect key="frame" x="12" y="12" width="353" height="196"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EWn-MK-tNV">
-                                <rect key="frame" x="0.0" y="0.0" width="353" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="353" height="22"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-bt-Ejh">
-                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="30"/>
-                                        <state key="normal" title="Phone"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-bt-Ejh">
+                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="22"/>
+                                        <state key="normal" image="phone.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="didTapPhoneButton:" destination="OS9-An-dqc" eventType="touchUpInside" id="twq-U9-QjX"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eJ-ap-Bw6">
-                                        <rect key="frame" x="93.5" y="0.0" width="73" height="30"/>
-                                        <state key="normal" title="Email"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eJ-ap-Bw6">
+                                        <rect key="frame" x="93.5" y="0.0" width="73" height="22"/>
+                                        <state key="normal" image="envelope.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="didTapEmailButton:" destination="OS9-An-dqc" eventType="touchUpInside" id="F5X-6m-g7H"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-lc-fNB">
-                                        <rect key="frame" x="186.5" y="0.0" width="73.5" height="30"/>
-                                        <state key="normal" title="Link"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-lc-fNB">
+                                        <rect key="frame" x="186.5" y="0.0" width="73.5" height="22"/>
+                                        <state key="normal" image="link" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                         <connections>
                                             <action selector="didTapLinkButton:" destination="OS9-An-dqc" eventType="touchUpInside" id="u0v-55-L1U"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fv-Aj-sGK">
-                                        <rect key="frame" x="280" y="0.0" width="73" height="30"/>
-                                        <state key="normal" title="Message"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fv-Aj-sGK">
+                                        <rect key="frame" x="280" y="0.0" width="73" height="22"/>
+                                        <state key="normal" title="Message" image="message.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C4v-Nj-4M3">
-                                <rect key="frame" x="0.0" y="54" width="353" height="142"/>
+                                <rect key="frame" x="0.0" y="46" width="353" height="150"/>
                             </mapView>
                         </subviews>
                     </stackView>
@@ -65,9 +73,16 @@
                 <outlet property="emailButton" destination="6eJ-ap-Bw6" id="h1G-Od-AZy"/>
                 <outlet property="linkButton" destination="xzL-lc-fNB" id="VxU-oH-4Vw"/>
                 <outlet property="mapView" destination="C4v-Nj-4M3" id="voE-bf-6cj"/>
+                <outlet property="messageButton" destination="0Fv-Aj-sGK" id="hdk-i8-CMB"/>
                 <outlet property="phoneButton" destination="PWG-bt-Ejh" id="FBb-nH-1Vm"/>
             </connections>
             <point key="canvasLocation" x="-69.599999999999994" y="-35.082458770614693"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="envelope.fill" catalog="system" width="128" height="93"/>
+        <image name="link" catalog="system" width="128" height="116"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
+    </resources>
 </document>

@@ -15,6 +15,7 @@ struct OrgDetailActionListCellData {
 
 class OrgDetailActionListCell: BaseTableViewCell<OrgDetailActionListCellData> {
     
+    @IBOutlet weak var titleLabel: UILabel!
     override func setup() {
         //TODO Set up the cell
     }

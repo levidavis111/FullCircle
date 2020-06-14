@@ -52,9 +52,15 @@ extension OrgDetailViewController {
     func displayItem(_ organization: Organization) {
         var couplers = [BaseCellCoupler]()
         
-        let  ordNameAndDescrip = OrgDetailCellInfo(title: organization.name, description: organization.description)
-        let ordNameAndDescripCell = CellCoupler(OrgDetailCell.self, ordNameAndDescrip)
-        couplers.append(ordNameAndDescripCell)
+        //Logo
+        let orgLogo = OrgDetailImageCellData(image: organization.logoString)
+        let orgLogoCell = CellCoupler(OrgDetailImageCell.self, orgLogo)
+        couplers.append(orgLogoCell)
+        
+        //Name & Description
+        let orgNameAndDescrip = OrgDetailCellInfo(title: organization.name, description: organization.description)
+        let orgNameAndDescripCell = CellCoupler(OrgDetailCell.self, orgNameAndDescrip)
+        couplers.append(orgNameAndDescripCell)
         
 //        let orgAction = OrgDetailCellInfo(title: "Example")
 //        let orgActionCell = CellCoupler(OrgDetailCell.self, orgAction, didSelect: { [weak self] (_) in

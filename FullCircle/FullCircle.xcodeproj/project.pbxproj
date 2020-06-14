@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48A8295E2496A80D008D9359 /* OrgDetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */; };
+		48A8295F2496A80D008D9359 /* OrgDetailImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */; };
 		48B331D524953095007080C7 /* TableSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D424953095007080C7 /* TableSource.swift */; };
 		48B331D724953254007080C7 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D624953254007080C7 /* BaseTableViewCell.swift */; };
 		48B331DA24967DC6007080C7 /* OrgDetailActionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B331D824967DC6007080C7 /* OrgDetailActionListCell.swift */; };
@@ -62,6 +64,8 @@
 /* Begin PBXFileReference section */
 		28769A0811DD16EF70F6046C /* Pods-FullCircle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircle.debug.xcconfig"; path = "Target Support Files/Pods-FullCircle/Pods-FullCircle.debug.xcconfig"; sourceTree = "<group>"; };
 		397BAF6C151D48409376AFF4 /* Pods-FullCircle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FullCircle.release.xcconfig"; path = "Target Support Files/Pods-FullCircle/Pods-FullCircle.release.xcconfig"; sourceTree = "<group>"; };
+		48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailImageCell.swift; sourceTree = "<group>"; };
+		48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrgDetailImageCell.xib; sourceTree = "<group>"; };
 		48B331D424953095007080C7 /* TableSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSource.swift; sourceTree = "<group>"; };
 		48B331D624953254007080C7 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		48B331D824967DC6007080C7 /* OrgDetailActionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgDetailActionListCell.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				48B331DD24967DF5007080C7 /* OrgDetailButtonCell.xib */,
 				48B331E024967FEF007080C7 /* OrgDetailContactCell.swift */,
 				48B331E124967FEF007080C7 /* OrgDetailContactCell.xib */,
+				48A8295C2496A80C008D9359 /* OrgDetailImageCell.swift */,
+				48A8295D2496A80C008D9359 /* OrgDetailImageCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A8295F2496A80D008D9359 /* OrgDetailImageCell.xib in Resources */,
 				48B331E324967FF0007080C7 /* OrgDetailContactCell.xib in Resources */,
 				48B331DF24967DF5007080C7 /* OrgDetailButtonCell.xib in Resources */,
 				EAE711562494487D00418D64 /* LaunchScreen.storyboard in Resources */,
@@ -528,6 +535,7 @@
 				48B331D724953254007080C7 /* BaseTableViewCell.swift in Sources */,
 				EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */,
 				FC380B58249566F300DE703D /* PersistenceHelper.swift in Sources */,
+				48A8295E2496A80D008D9359 /* OrgDetailImageCell.swift in Sources */,
 				EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */,
 				EAE7117A249463B400418D64 /* Organization.swift in Sources */,
 				EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */,

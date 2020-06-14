@@ -22,6 +22,8 @@ class OrgDetailContactCell: BaseTableViewCell<OrgDetailContactCellData>, CLLocat
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var linkButton: UIButton!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var messageButton: UIButton!
+    
     
     var locationManager = CLLocationManager()
     let authorizationStatus = CLLocationManager.authorizationStatus()
@@ -30,6 +32,15 @@ class OrgDetailContactCell: BaseTableViewCell<OrgDetailContactCellData>, CLLocat
     override func setup() {
         mapView.delegate = self
         locationManager.delegate = self
+        setUpUI()
+    }
+    
+    func setUpUI() {
+        phoneButton.setImage(UIImage(systemName: "phone"), for: .normal)
+        emailButton.setImage(UIImage(systemName: "phone"), for: .normal)
+        linkButton.setImage(UIImage(systemName: "phone"), for: .normal)
+        messageButton.setImage(UIImage(systemName: "phone"), for: .normal)
+        
     }
     
     @IBAction func didTapPhoneButton(_ sender: Any) {

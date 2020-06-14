@@ -23,7 +23,9 @@ class ActionDetailViewController: UIViewController {
     
     private lazy var orgNameLabel: UILabel = {
         let label = UILabel()
-        
+        label.textColor = .white
+        label.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .headline), size: 25)
+        label.text = self.action.organization.name
         return label
     }()
     
@@ -35,7 +37,10 @@ class ActionDetailViewController: UIViewController {
     
     private lazy var descriptionTextView: UITextView = {
         let textView = UITextView()
-        
+        textView.backgroundColor = .black
+        textView.font = UIFont(descriptor: .preferredFontDescriptor(withTextStyle: .body), size: 20)
+        textView.textColor = .white
+        textView.text = self.action.description
         return textView
     }()
     
@@ -49,6 +54,7 @@ class ActionDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         addSubviews()
         constrainSubviews()
         setExclusionPath()
@@ -116,9 +122,10 @@ class ActionDetailViewController: UIViewController {
     private func constrainTakeActionButton() {
         takeActionButton.translatesAutoresizingMaskIntoConstraints = false
         [takeActionButton.topAnchor.constraint(equalTo: descriptionTextView.bottomAnchor, constant: padding),
-         takeActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: (2 * padding)),
+         takeActionButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+         takeActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: (-4 * padding)),
          takeActionButton.heightAnchor.constraint(equalToConstant: 30),
-         takeActionButton.widthAnchor.constraint(equalToConstant: 60)].forEach {$0.isActive = true}
+         takeActionButton.widthAnchor.constraint(equalToConstant: 180)].forEach {$0.isActive = true}
     }
 
 }

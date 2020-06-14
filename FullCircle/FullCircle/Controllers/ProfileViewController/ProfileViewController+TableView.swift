@@ -28,6 +28,13 @@ extension ProfileViewController: UITableViewDataSource {
             cell.saveActionButton.isHidden = true
             
         } else {
+            cell.noActionLabel.isHidden = true
+            cell.actionNameLabel.isHidden = false
+            cell.actionTypeImageView.isHidden = false
+            cell.orgNameLabel.isHidden = false
+            cell.saveActionButton.isHidden = false
+            
+            
             let action = savedActions[indexPath.row]
             
             cell.actionNameLabel.text = action.name
@@ -46,8 +53,9 @@ extension ProfileViewController: UITableViewDataSource {
                 let index = allActions.firstIndex(where: { $0.name == action.name } )
                 allActions[index!].isSaved = allActions[index!].isSaved ? false : true
                 print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")
+                self.updateUserInfoLabel()
             }
-            updateUserInfoLabel()
+            
         }
         
         return cell
@@ -62,11 +70,15 @@ extension ProfileViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let actionDetailVC = ActionDetailViewController()
-        let thisAction = savedActions[indexPath.row]
-        actionDetailVC.action = thisAction
-        print("Pressed")
-        navigationController?.pushViewController(actionDetailVC, animated: true)
+        if savedActions.isEmpty {
+            print("No action to see details for!")
+        } else {
+            let actionDetailVC = ActionDetailViewController()
+            let thisAction = savedActions[indexPath.row]
+            actionDetailVC.action = thisAction
+            print("Pressed")
+            navigationController?.pushViewController(actionDetailVC, animated: true)
+        }
     }
     
 }

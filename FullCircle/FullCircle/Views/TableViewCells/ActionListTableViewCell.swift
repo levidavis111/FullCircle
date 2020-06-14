@@ -32,7 +32,7 @@ class ActionListTableViewCell: UITableViewCell {
     //TODO: Add image logos for action type i.e. telephone or email
     lazy var actionTypeImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
+//        imageView.backgroundColor = .blue
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         return imageView
@@ -52,6 +52,8 @@ class ActionListTableViewCell: UITableViewCell {
     //MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        backgroundColor = .clear
+        
         
         addSubviews()
         addConstraints()
@@ -78,8 +80,10 @@ class ActionListTableViewCell: UITableViewCell {
             closure()
             if saveActionButton.backgroundImage(for: .normal) == UIImage(systemName: "star.circle") {
                 saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+                saveActionButton.tintColor = FCDesign.red
             } else {
                 saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+                saveActionButton.tintColor = FCDesign.darkGrey
             }
         }
     }

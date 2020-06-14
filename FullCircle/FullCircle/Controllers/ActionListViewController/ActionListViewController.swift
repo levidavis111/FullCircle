@@ -11,16 +11,12 @@ import UIKit
 class ActionListViewController: UIViewController {
     
     //MARK: - UI Objects
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        return searchBar
-    }()
+    lazy var searchBar = FCSearchBar()
     
-    lazy var levelLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Choose level of engagement"
+    lazy var levelLabel: FCSubHeaderLabel = {
+        let label = FCSubHeaderLabel()
+        label.text = "filter by Engagement Level"
         label.textAlignment = .center
-        label.numberOfLines = 0
         return label
     }()
     
@@ -29,7 +25,7 @@ class ActionListViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "a.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "a.circle.fill"), for: .selected)
-        button.tintColor = .black
+        button.tintColor = FCDesign.lightBlue
         button.tag = 0
         button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
@@ -39,7 +35,7 @@ class ActionListViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "1.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "1.circle.fill"), for: .selected)
-        button.tintColor = .black
+        button.tintColor = FCDesign.lightBlue
         button.tag = 1
         button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
@@ -49,7 +45,7 @@ class ActionListViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "2.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "2.circle.fill"), for: .selected)
-        button.tintColor = .black
+        button.tintColor = FCDesign.lightBlue
         button.tag = 2
         button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
@@ -59,7 +55,7 @@ class ActionListViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "3.circle"), for: .normal)
 //        button.setImage(UIImage(systemName: "3.circle.fill"), for: .selected)
-        button.tintColor = .black
+        button.tintColor = FCDesign.lightBlue
         button.tag = 3
         button.addTarget(self, action: #selector(levelButtonPressed(button:)), for: .touchUpInside)
         return button
@@ -79,6 +75,7 @@ class ActionListViewController: UIViewController {
         tableView.delegate = self
         tableView.register(ActionListTableViewCell.self, forCellReuseIdentifier: "actionListCell")
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
@@ -92,7 +89,8 @@ class ActionListViewController: UIViewController {
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = FCDesign.medGrey
+        self.navigationItem.title = "FullCircle"
         
         addSubviews()
         addConstraints()

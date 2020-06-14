@@ -27,15 +27,13 @@ extension ProfileViewController: UITableViewDataSource {
             
         } else {
             cell.noActionLabel.isHidden = true
-            cell.actionNameLabel.isHidden = false
-            cell.actionTypeImageView.isHidden = false
-            cell.orgNameLabel.isHidden = false
+            cell.infoView.isHidden = false
             cell.saveActionButton.isHidden = false
             
             
             let action = savedActions[indexPath.row]
             
-            cell.actionNameLabel.text = action.name.uppercased()
+            cell.actionNameLabel.text = action.name
             cell.orgNameLabel.text = action.organization.name
             //TODO: Update image based on action type
             cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
@@ -43,8 +41,10 @@ extension ProfileViewController: UITableViewDataSource {
             switch action.isSaved {
             case true:
                 cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+                cell.saveActionButton.tintColor = FCDesign.red
             default:
                 cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+                cell.saveActionButton.tintColor = FCDesign.darkGrey
             }
             
             cell.saveAction = {

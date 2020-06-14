@@ -26,9 +26,18 @@ class HomeTabBarController: UITabBarController {
         profileVC.tabBarItem = UITabBarItem(title: "My Actions", image: UIImage(systemName: "person.circle"), tag: 3)
         
         self.viewControllers = controllers
-        self.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}
+        self.viewControllers = controllers.map { FCNavigationController(rootViewController: $0)}
+        
+        styleTabBar()
     }
+
     
+    private func styleTabBar() {
+        tabBar.barTintColor = FCDesign.lightGrey
+        tabBar.tintColor = FCDesign.darkBlue
+        tabBar.unselectedItemTintColor = FCDesign.lightBlue
+        tabBar.isTranslucent = false
+      }
 
 
 }

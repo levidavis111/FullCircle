@@ -31,7 +31,6 @@
 		EAE711812495362300418D64 /* OrgListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */; };
 		EAE7118424953A7D00418D64 /* OrgListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */; };
 		EAE7118724953F1700418D64 /* OrgListTableViewCell+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */; };
-
 		EAE7118A249562AA00418D64 /* ActionListViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */; };
 		EAE7118C24956EAB00418D64 /* ActionListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118B24956EAB00418D64 /* ActionListViewController+TableView.swift */; };
 		EAE7119024956F6400418D64 /* ActionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7118F24956F6400418D64 /* ActionListTableViewCell.swift */; };
@@ -84,7 +83,6 @@
 		EAE711802495362300418D64 /* OrgListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListViewController+Constraints.swift"; sourceTree = "<group>"; };
 		EAE7118324953A7D00418D64 /* OrgListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrgListTableViewCell.swift; sourceTree = "<group>"; };
 		EAE7118624953F1700418D64 /* OrgListTableViewCell+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrgListTableViewCell+Constraints.swift"; sourceTree = "<group>"; };
-
 		EAE71189249562AA00418D64 /* ActionListViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+Constraints.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+Constraints.swift"; sourceTree = SOURCE_ROOT; };
 		EAE7118B24956EAB00418D64 /* ActionListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+TableView.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+TableView.swift"; sourceTree = SOURCE_ROOT; };
 		EAE7118F24956F6400418D64 /* ActionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActionListTableViewCell.swift; path = FullCircle/Views/TableViewCells/ActionListTableViewCell.swift; sourceTree = SOURCE_ROOT; };
@@ -92,7 +90,6 @@
 		EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+Buttons.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+Buttons.swift"; sourceTree = SOURCE_ROOT; };
 		FC380B57249566F300DE703D /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		FC380B592495689D00DE703D /* ActionPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPersistenceManager.swift; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

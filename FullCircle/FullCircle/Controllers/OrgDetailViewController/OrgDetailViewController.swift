@@ -27,6 +27,7 @@ class OrgDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupTableSource()
+        refreshUI()
     }
     
     //Setup
@@ -37,18 +38,39 @@ class OrgDetailViewController: UIViewController {
     func setupTableSource() {
         tableSource = TableSource(with: tableView)
     }
+    
+    func refreshUI() {
+        displayItem(self.organization)
+    }
 }
 
+
+
 extension OrgDetailViewController {
-    func displayItem() {
+    func displayItem(_ organization: Organization) {
         var sections = [CellCouplerSection]()
         
         var couplers = [BaseCellCoupler]()
-        let info = OrgDetailCellInfo(title: "Example")
-        let coupler = CellCoupler(OrgDetailCell.self, info, didSelect: { [weak self] (_) in
+        
+        let  ordNameAndDescrip = OrgDetailCellInfo(title: "Example")
+        let ordNameAndDescripCell = CellCoupler(OrgDetailCell.self, ordNameAndDescrip)
+        couplers.append(ordNameAndDescripCell)
+        
+        let orgAction = OrgDetailCellInfo(title: "Example")
+        let orgActionCell = CellCoupler(OrgDetailCell.self, orgAction, didSelect: { [weak self] (_) in
             // TODO: Handle selection
         })
-        couplers.append(coupler)
+        couplers.append(orgActionCell)
+        
+        let orgContactInfo = OrgDetailCellInfo(title: "Example")
+        let orgContactInfoCell = CellCoupler(OrgDetailCell.self, orgContactInfo)
+        couplers.append(orgContactInfoCell)
+        
+        
+        let donateToOrgInfo = OrgDetailCellInfo(title: "Example")
+        let buttonActioncell = CellCoupler(OrgDetailCell.self, donateToOrgInfo)
+        couplers.append(buttonActioncell)
+        
         sections.append(CellCouplerSection(couplers: couplers))
         
         tableSource?.set(sections: sections)

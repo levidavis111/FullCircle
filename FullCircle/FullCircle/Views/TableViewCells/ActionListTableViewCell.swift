@@ -34,7 +34,6 @@ class ActionListTableViewCell: UITableViewCell {
         let imageView = UIImageView()
 //        imageView.backgroundColor = .blue
         imageView.contentMode = .scaleAspectFit
-        imageView.tintColor = FCDesign.red
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -81,8 +80,10 @@ class ActionListTableViewCell: UITableViewCell {
             closure()
             if saveActionButton.backgroundImage(for: .normal) == UIImage(systemName: "star.circle") {
                 saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+                saveActionButton.tintColor = FCDesign.red
             } else {
                 saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+                saveActionButton.tintColor = FCDesign.darkGrey
             }
         }
     }

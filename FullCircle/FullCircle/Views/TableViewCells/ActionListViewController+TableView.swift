@@ -25,8 +25,10 @@ extension ActionListViewController: UITableViewDataSource {
         switch action.isSaved {
         case true:
             cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+            cell.saveActionButton.tintColor = FCDesign.red
         default:
             cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+            cell.saveActionButton.tintColor = FCDesign.darkGrey
         }
         
         

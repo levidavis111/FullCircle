@@ -73,7 +73,10 @@ class ActionDetailViewController: UIViewController {
         let button = UIButton()
         button.isHidden = true
         button.isUserInteractionEnabled = false
-        
+        button.backgroundColor = .lightGray
+        button.setTitle("Dismiss", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.addTarget(self, action: #selector(dismissButtonPressed), for: .touchUpInside)
         return button
     }()
 
@@ -87,16 +90,35 @@ class ActionDetailViewController: UIViewController {
     }
     
     @objc private func takeActionButtonPressed() {
-//        sendEmail()
-        showMap()
+        if action.organization.name == "Black Lives Matter" {
+            showMap()
+        } else if action.organization.name == "Color of Change" {
+            sendEmail()
+        } else {
+            let alert = UIAlertController(title: "Please Contact Us For More Info", message: "\(action.organization.email)\n\(action.organization.phone)", preferredStyle: .alert)
+            let action = UIAlertAction(title: "DISMISS", style: .default, handler: nil)
+            alert.addAction(action)
+            DispatchQueue.main.async {[weak self] in
+                self?.present(alert, animated: true)
+            }
+        }
+    }
+    
+    @objc private func dismissButtonPressed() {
+        mapView.isHidden = true
+        mapView.isUserInteractionEnabled = false
+        dismissButton.isUserInteractionEnabled = false
+        dismissButton.isHidden = true
+        navigationController?.navigationBar.isHidden = false
+        view.sendSubviewToBack(mapView)
     }
     
     private func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["you@yoursite.com"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            mail.setToRecipients(["localrep@government.gov"])
+            mail.setMessageBody("<p>Dear local lawmaker: Please pledge your support for the new police reform bill</p>", isHTML: true)
 
             present(mail, animated: true)
         } else {
@@ -110,6 +132,7 @@ class ActionDetailViewController: UIViewController {
         mapView.isUserInteractionEnabled = true
         dismissButton.isHidden = false
         dismissButton.isUserInteractionEnabled = true
+        navigationController?.navigationBar.isHidden = true
         view.bringSubviewToFront(mapView)
     }
     
@@ -183,7 +206,13 @@ class ActionDetailViewController: UIViewController {
          mapView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)].forEach {$0.isActive = true}
     }
     
-    private func constrainDismissButton() {}
+    private func constrainDismissButton() {
+        dismissButton.translatesAutoresizingMaskIntoConstraints = false
+        [dismissButton.leadingAnchor.constraint(equalTo: mapView.safeAreaLayoutGuide.leadingAnchor, constant: padding),
+         dismissButton.bottomAnchor.constraint(equalTo: mapView.safeAreaLayoutGuide.bottomAnchor, constant: -padding),
+         dismissButton.heightAnchor.constraint(equalToConstant: 20),
+         dismissButton.widthAnchor.constraint(equalToConstant: 80)].forEach {$0.isActive = true}
+    }
 
 }
 

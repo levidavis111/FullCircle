@@ -34,6 +34,7 @@ class ProfileViewController: UIViewController {
         tableView.delegate = self
         tableView.register(ActionListTableViewCell.self, forCellReuseIdentifier: "actionListCell")
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
@@ -47,8 +48,7 @@ class ProfileViewController: UIViewController {
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        
+        view.backgroundColor = FCDesign.medGrey
         addSubviews()
         addConstraints()
         

@@ -22,6 +22,7 @@ class OrgListViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(OrgListTableViewCell.self, forCellReuseIdentifier: "orgListCell")
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
@@ -31,7 +32,7 @@ class OrgListViewController: UIViewController {
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = FCDesign.medGrey
         
         addSubviews()
         addConstraints()

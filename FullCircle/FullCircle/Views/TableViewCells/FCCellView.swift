@@ -13,6 +13,8 @@ class FCCellView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addShadowToView()
+        
+        backgroundColor = FCDesign.lightGrey
     }
     
     required init?(coder: NSCoder) {

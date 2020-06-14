@@ -15,7 +15,7 @@ class ActionListViewController: UIViewController {
     
     lazy var levelLabel: FCSubHeaderLabel = {
         let label = FCSubHeaderLabel()
-        label.text = "Engagement Level"
+        label.text = "filter by Engagement Level"
         label.textAlignment = .center
         return label
     }()

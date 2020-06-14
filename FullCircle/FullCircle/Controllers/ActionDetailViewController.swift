@@ -8,12 +8,20 @@
 
 import UIKit
 import MessageUI
+import MapKit
+import CoreLocation
 
 class ActionDetailViewController: UIViewController {
     
     var action: Action!
     private let padding: CGFloat = 10.0
-    private lazy var imagePath = UIBezierPath(rect: activityTypeIconView.frame)
+   
+
+    let lat = 40.6739
+    let long = -73.9701
+
+    let initialLocation = CLLocation(latitude: 40.6739, longitude: -73.9701)
+    let searchRadius: Double = 2000
     
     private lazy var orgLogoView: UIImageView = {
         let imageView = UIImageView()
@@ -53,22 +61,34 @@ class ActionDetailViewController: UIViewController {
         button.addTarget(self, action: #selector(takeActionButtonPressed), for: .touchUpInside)
         return button
     }()
+    
+    lazy var mapView: MKMapView = {
+        let mapView = MKMapView()
+        mapView.isHidden = true
+        mapView.isUserInteractionEnabled = false
+        return mapView
+    }()
+    
+    lazy var dismissButton: UIButton = {
+        let button = UIButton()
+        button.isHidden = true
+        button.isUserInteractionEnabled = false
+        
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         addSubviews()
+        setupDelegates()
+        getAnnotation()
         constrainSubviews()
-        setExclusionPath()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setExclusionPath()
     }
     
     @objc private func takeActionButtonPressed() {
-        sendEmail()
+//        sendEmail()
+        showMap()
     }
     
     private func sendEmail() {
@@ -85,11 +105,18 @@ class ActionDetailViewController: UIViewController {
         }
     }
     
-    private func setExclusionPath() {
-        DispatchQueue.main.async {
-            self.descriptionTextView.textContainer.exclusionPaths = [self.imagePath]
-            self.view.layoutIfNeeded()
-        }
+    private func showMap() {
+        mapView.isHidden = false
+        mapView.isUserInteractionEnabled = true
+        dismissButton.isHidden = false
+        dismissButton.isUserInteractionEnabled = true
+        view.bringSubviewToFront(mapView)
+    }
+    
+    private func setupDelegates() {
+        mapView.delegate = self
+        mapView.userTrackingMode = .follow
+       
     }
     
     private func addSubviews() {
@@ -98,6 +125,8 @@ class ActionDetailViewController: UIViewController {
         view.addSubview(descriptionTextView)
         descriptionTextView.addSubview(activityTypeIconView)
         view.addSubview(takeActionButton)
+        view.addSubview(mapView)
+        mapView.addSubview(dismissButton)
     }
     
     private func constrainSubviews() {
@@ -106,6 +135,8 @@ class ActionDetailViewController: UIViewController {
         constrainDescriptionTextView()
         constrainActivityTypeIconView()
         constrainTakeActionButton()
+        constrainMapView()
+        constrainDismissButton()
     }
     
     private func constrainOrgLogoView() {
@@ -143,6 +174,16 @@ class ActionDetailViewController: UIViewController {
          takeActionButton.heightAnchor.constraint(equalToConstant: 30),
          takeActionButton.widthAnchor.constraint(equalToConstant: 180)].forEach {$0.isActive = true}
     }
+    
+    private func constrainMapView() {
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        [mapView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+         mapView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+         mapView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+         mapView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)].forEach {$0.isActive = true}
+    }
+    
+    private func constrainDismissButton() {}
 
 }
 

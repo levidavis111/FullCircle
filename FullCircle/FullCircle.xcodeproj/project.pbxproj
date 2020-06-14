@@ -38,6 +38,7 @@
 		EAE711942495759300418D64 /* ActionListViewController+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */; };
 		FC380B58249566F300DE703D /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B57249566F300DE703D /* PersistenceHelper.swift */; };
 		FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B592495689D00DE703D /* ActionPersistenceManager.swift */; };
+		FC380B5C2496740D00DE703D /* ActionDetailViewController+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		EAE711932495759300418D64 /* ActionListViewController+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ActionListViewController+Buttons.swift"; path = "FullCircle/Views/TableViewCells/ActionListViewController+Buttons.swift"; sourceTree = SOURCE_ROOT; };
 		FC380B57249566F300DE703D /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		FC380B592495689D00DE703D /* ActionPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPersistenceManager.swift; sourceTree = "<group>"; };
+		FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionDetailViewController+Map.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 				EAE7118824955ED400418D64 /* ActionListViewController */,
 				48B4CA3B2495292C007B621E /* OrgDetailViewController.swift */,
 				EAE7117324945FF400418D64 /* ActionDetailViewController.swift */,
+				FC380B5B2496740D00DE703D /* ActionDetailViewController+Map.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				EAE711922495707700418D64 /* ActionListTableViewCell+Constraints.swift in Sources */,
 				EAE7117F249535BD00418D64 /* OrgListViewController+TableView.swift in Sources */,
 				48B331D524953095007080C7 /* TableSource.swift in Sources */,
+				FC380B5C2496740D00DE703D /* ActionDetailViewController+Map.swift in Sources */,
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
 				48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */,
 				FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */,

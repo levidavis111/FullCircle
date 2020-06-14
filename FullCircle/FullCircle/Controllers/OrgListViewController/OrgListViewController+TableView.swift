@@ -17,8 +17,11 @@ extension OrgListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "orgListCell", for: indexPath) as! OrgListTableViewCell
         let organization = organizations[indexPath.row]
         
-        cell.orgNameLabel.text = organization.name.uppercased()
-        cell.orgDetailLabel.text = "\(organization.borough.rawValue)   \(organization.type)"
+        cell.orgNameLabel.text = organization.name
+        cell.orgDetailLabel.text = """
+        \(organization.type)
+        \(organization.borough.rawValue), NY
+        """
         cell.orgLogoImageView.image = UIImage(named: organization.logoString)
         
         return cell

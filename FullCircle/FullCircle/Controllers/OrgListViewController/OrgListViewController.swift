@@ -11,10 +11,7 @@ import UIKit
 class OrgListViewController: UIViewController {
     
     //MARK: - UI Objects
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        return searchBar
-    }()
+    lazy var searchBar = FCSearchBar()
     
     lazy var orgListTableView: UITableView = {
         let tableView = UITableView()
@@ -22,6 +19,7 @@ class OrgListViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(OrgListTableViewCell.self, forCellReuseIdentifier: "orgListCell")
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .clear
         return tableView
     }()
     
@@ -31,7 +29,8 @@ class OrgListViewController: UIViewController {
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = FCDesign.medGrey
+        self.navigationItem.title = "FullCircle"
         
         addSubviews()
         addConstraints()

@@ -68,8 +68,10 @@ class ActionListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    
     @objc func saveActionButtonPressed(_ sender: UIButton) {
         // Take care of persisting saved actions here
+        if let closure = self.saveAction {
+            closure()
+        }
     }
 }

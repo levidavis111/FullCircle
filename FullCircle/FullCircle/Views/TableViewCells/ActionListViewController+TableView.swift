@@ -22,6 +22,22 @@ extension ActionListViewController: UITableViewDataSource {
         //TODO: Update image based on action type
         cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!
         
+        switch action.isSaved {
+        case true:
+            cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle.fill"), for: .normal)
+        default:
+            cell.saveActionButton.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
+        }
+        
+        
+        cell.saveAction = {
+           // filter through global property
+            let index = allActions.firstIndex(where: { $0.name == action.name } )
+            allActions[index!].isSaved = allActions[index!].isSaved ? false : true
+            print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")
+        }
+        
+        
         return cell
     }
     

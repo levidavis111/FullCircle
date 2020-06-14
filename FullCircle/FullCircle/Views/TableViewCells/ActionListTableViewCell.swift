@@ -11,19 +11,21 @@ import UIKit
 class ActionListTableViewCell: UITableViewCell {
     
     //MARK: - UI Objects
-    let noActionLabel: UILabel = {
-        let label = UILabel()
+    let noActionLabel: FCBodyLabel = {
+        let label = FCBodyLabel()
         label.text = "No saved actions... browse the Actions List to start making a difference!"
         label.textAlignment = .center
-        label.textColor = .gray
-        label.numberOfLines = 0
         label.isHidden = true
         return label
     }()
     
     let actionNameLabel = FCHeaderLabel()
-    
-    let orgNameLabel = FCSubHeaderLabel()
+    let withLabel: FCCaptionLabel = {
+        let label = FCCaptionLabel()
+        label.text = "with"
+        return label
+    }()
+    let orgNameLabel = FCBodyLabel()
 
     //TODO: Add image logos for action type i.e. telephone or email
     lazy var actionTypeImageView: UIImageView = {

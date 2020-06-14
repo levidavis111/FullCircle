@@ -15,6 +15,7 @@ extension ActionListTableViewCell {
         self.addSubview(saveActionButton)
         self.addSubview(actionTypeImageView)
         self.addSubview(actionNameLabel)
+        self.addSubview(withLabel)
         self.addSubview(orgNameLabel)
     }
     
@@ -23,6 +24,7 @@ extension ActionListTableViewCell {
         setSaveActionButtonConstraints()
         setActionTypeImageViewConstraints()
         setActionNameLabelConstraints()
+        setWithLabelConstraints()
         setOrgNameLabelConstraints()
     }
     
@@ -71,6 +73,17 @@ extension ActionListTableViewCell {
         ])
     }
     
+    private func setWithLabelConstraints() {
+        withLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            withLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
+            withLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor),
+            withLabel.topAnchor.constraint(equalTo: actionNameLabel.bottomAnchor, constant: 0),
+            withLabel.heightAnchor.constraint(equalToConstant: 15)
+        ])
+    }
+    
     private func setOrgNameLabelConstraints() {
         orgNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -78,7 +91,7 @@ extension ActionListTableViewCell {
             orgNameLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 10),
             orgNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -10),
             orgNameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -5),
-            orgNameLabel.topAnchor.constraint(equalTo: actionNameLabel.bottomAnchor, constant: 5),
+            orgNameLabel.topAnchor.constraint(equalTo: withLabel.bottomAnchor, constant: 5),
         ])
     }
     

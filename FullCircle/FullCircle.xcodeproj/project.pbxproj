@@ -19,6 +19,10 @@
 		EA2B42BE2495B98800136D4F /* ProfileViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42BD2495B98800136D4F /* ProfileViewController+TableView.swift */; };
 		EA2B42C02495BD7A00136D4F /* ProfileViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42BF2495BD7A00136D4F /* ProfileViewController+Constraints.swift */; };
 		EA2B42C42496764700136D4F /* FCDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42C32496764700136D4F /* FCDesign.swift */; };
+		EA2B42C824967A1D00136D4F /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B42C724967A1D00136D4F /* WorkSans-Bold.ttf */; };
+		EA2B42C924967A1D00136D4F /* WorkSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B42C724967A1D00136D4F /* WorkSans-Bold.ttf */; };
+		EA2B42CB24967A3000136D4F /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B42CA24967A3000136D4F /* WorkSans-Regular.ttf */; };
+		EA2B42CC24967A3000136D4F /* WorkSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA2B42CA24967A3000136D4F /* WorkSans-Regular.ttf */; };
 		EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711492494487A00418D64 /* AppDelegate.swift */; };
 		EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114B2494487A00418D64 /* SceneDelegate.swift */; };
 		EAE711512494487A00418D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE7114F2494487A00418D64 /* Main.storyboard */; };
@@ -71,6 +75,8 @@
 		EA2B42BD2495B98800136D4F /* ProfileViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+TableView.swift"; sourceTree = "<group>"; };
 		EA2B42BF2495BD7A00136D4F /* ProfileViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewController+Constraints.swift"; sourceTree = "<group>"; };
 		EA2B42C32496764700136D4F /* FCDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCDesign.swift; sourceTree = "<group>"; };
+		EA2B42C724967A1D00136D4F /* WorkSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.ttf"; sourceTree = "<group>"; };
+		EA2B42CA24967A3000136D4F /* WorkSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.ttf"; sourceTree = "<group>"; };
 		EAE711462494487A00418D64 /* FullCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711492494487A00418D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE7114B2494487A00418D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,8 +169,18 @@
 			isa = PBXGroup;
 			children = (
 				EA2B42C32496764700136D4F /* FCDesign.swift */,
+				EA2B42C6249679FE00136D4F /* Fonts */,
 			);
 			path = Design;
+			sourceTree = "<group>";
+		};
+		EA2B42C6249679FE00136D4F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EA2B42C724967A1D00136D4F /* WorkSans-Bold.ttf */,
+				EA2B42CA24967A3000136D4F /* WorkSans-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		EAE7113D2494487A00418D64 = {
@@ -410,6 +426,8 @@
 				48B4CA3D2495292C007B621E /* OrgDetailCell.xib in Resources */,
 				48B4CA3C2495292C007B621E /* OrgDetail.storyboard in Resources */,
 				EAE711512494487A00418D64 /* Main.storyboard in Resources */,
+				EA2B42C824967A1D00136D4F /* WorkSans-Bold.ttf in Resources */,
+				EA2B42CB24967A3000136D4F /* WorkSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +435,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA2B42C924967A1D00136D4F /* WorkSans-Bold.ttf in Resources */,
+				EA2B42CC24967A3000136D4F /* WorkSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

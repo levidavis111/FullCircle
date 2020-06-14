@@ -36,8 +36,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "iphone",
       "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "logo_mark_primary@2x (2).png",
       "scale" : "3x"
     },
     {

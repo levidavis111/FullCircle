@@ -46,7 +46,7 @@ extension ActionListTableViewCell {
         
         NSLayoutConstraint.activate([
             saveActionButton.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            saveActionButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10),
+            saveActionButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20),
             saveActionButton.widthAnchor.constraint(equalToConstant: 30),
             saveActionButton.heightAnchor.constraint(equalToConstant: 30)
         ])
@@ -80,7 +80,7 @@ extension ActionListTableViewCell {
         
         NSLayoutConstraint.activate([
             actionNameLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 10),
-            actionNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -5),
+            actionNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -20),
             actionNameLabel.topAnchor.constraint(equalTo: infoView.topAnchor, constant: 5),
             actionNameLabel.heightAnchor.constraint(equalTo: infoView.heightAnchor, multiplier: 0.5)
         ])
@@ -91,7 +91,7 @@ extension ActionListTableViewCell {
         
         NSLayoutConstraint.activate([
             withLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 10),
-            withLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -5),
+            withLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -20),
             withLabel.topAnchor.constraint(equalTo: actionNameLabel.bottomAnchor, constant: 0),
             withLabel.heightAnchor.constraint(equalToConstant: 15)
         ])
@@ -102,7 +102,7 @@ extension ActionListTableViewCell {
         
         NSLayoutConstraint.activate([
             orgNameLabel.leftAnchor.constraint(equalTo: infoView.leftAnchor, constant: 10),
-            orgNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -5),
+            orgNameLabel.rightAnchor.constraint(equalTo: actionTypeImageView.leftAnchor, constant: -20),
             orgNameLabel.bottomAnchor.constraint(equalTo: infoView.bottomAnchor, constant: -10),
             orgNameLabel.topAnchor.constraint(equalTo: withLabel.bottomAnchor),
         ])

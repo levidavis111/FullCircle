@@ -21,6 +21,7 @@ class OrgListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(OrgListTableViewCell.self, forCellReuseIdentifier: "orgListCell")
+        tableView.separatorStyle = .none
         return tableView
     }()
     

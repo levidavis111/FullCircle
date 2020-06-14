@@ -57,6 +57,12 @@ class ProfileViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        savedActions = allActions.filter { $0.isSaved == true }
+        actionListTableView.reloadData()
+    }
     
     
 }

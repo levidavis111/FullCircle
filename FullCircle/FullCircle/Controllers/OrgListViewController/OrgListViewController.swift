@@ -30,7 +30,7 @@ class OrgListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = FCDesign.medGrey
-        title = "FullCircle"
+        self.navigationItem.title = "FullCircle"
         
         addSubviews()
         addConstraints()

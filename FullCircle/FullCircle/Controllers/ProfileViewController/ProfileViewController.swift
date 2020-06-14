@@ -46,10 +46,11 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = FCDesign.medGrey
+        self.navigationItem.title = "FullCircle"
+
+        
         addSubviews()
         addConstraints()
-        
-        title = "FullCircle"
 
     }
     

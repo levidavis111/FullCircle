@@ -37,7 +37,7 @@ extension ProfileViewController: UITableViewDataSource {
             
             let action = savedActions[indexPath.row]
             
-            cell.actionNameLabel.text = action.name
+            cell.actionNameLabel.text = action.name.uppercased()
             cell.orgNameLabel.text = action.organization.name
             //TODO: Update image based on action type
             cell.actionTypeImageView.image = UIImage(named: action.organization.logoString)!

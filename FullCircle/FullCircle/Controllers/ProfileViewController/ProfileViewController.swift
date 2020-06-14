@@ -20,6 +20,12 @@ class ProfileViewController: UIViewController {
     
     lazy var userInfoLabel = FCBodyLabel()
     
+    lazy var profilePic: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ProfilePic")
+        return imageView
+    }()
+    
     lazy var actionListTableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self

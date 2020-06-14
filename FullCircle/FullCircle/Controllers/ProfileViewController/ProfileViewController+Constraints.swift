@@ -11,6 +11,7 @@ import UIKit
 extension ProfileViewController {
     func addSubviews() {
         view.addSubview(searchBar)
+        view.addSubview(profilePic)
         view.addSubview(userNameLabel)
         view.addSubview(userInfoLabel)
         view.addSubview(actionListTableView)
@@ -18,6 +19,7 @@ extension ProfileViewController {
     
     func addConstraints() {
         setSearchBarConstraints()
+        setProfilePicConstraints()
         setUserNameLabelConstraints()
         setUserInfoLabelConsraints()
         setActionListTableViewConstraints()
@@ -34,12 +36,23 @@ extension ProfileViewController {
         ])
     }
     
+    private func setProfilePicConstraints() {
+        profilePic.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            profilePic.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -50),
+            profilePic.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 50),
+            profilePic.heightAnchor.constraint(equalToConstant: 60),
+            profilePic.widthAnchor.constraint(equalToConstant: 60)
+        ])
+    }
+    
     private func setUserNameLabelConstraints() {
         userNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            userNameLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            userNameLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
+            userNameLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 50),
+            userNameLabel.rightAnchor.constraint(equalTo: profilePic.leftAnchor, constant: 50),
             userNameLabel.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 50),
             userNameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
@@ -49,8 +62,8 @@ extension ProfileViewController {
         userInfoLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            userInfoLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
-            userInfoLabel.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, multiplier: 0.8),
+            userInfoLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 50),
+            userInfoLabel.rightAnchor.constraint(equalTo: profilePic.leftAnchor, constant: 50),
             userInfoLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor),
             userInfoLabel.heightAnchor.constraint(equalToConstant: 50)
         ])

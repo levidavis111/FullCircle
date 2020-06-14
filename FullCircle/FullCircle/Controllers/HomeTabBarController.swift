@@ -21,9 +21,9 @@ class HomeTabBarController: UITabBarController {
         super.viewDidLoad()
         
         // NOTE: Temporary Icons & Titles
-        actionListVC.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "smallcircle.circle"), tag: 0)
-        orgListVC.tabBarItem = UITabBarItem(title: "Organizations", image: UIImage(systemName: "person.3"), tag: 1)
-        profileVC.tabBarItem = UITabBarItem(title: "My Actions", image: UIImage(systemName: "star.circle"), tag: 3)
+        actionListVC.tabBarItem = UITabBarItem(title: "Actions", image: UIImage(systemName: "star.circle"), tag: 0)
+        orgListVC.tabBarItem = UITabBarItem(title: "Organizations", image: UIImage(systemName: "circle.grid.hex"), tag: 1)
+        profileVC.tabBarItem = UITabBarItem(title: "My Actions", image: UIImage(systemName: "person.circle"), tag: 3)
         
         self.viewControllers = controllers
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0)}

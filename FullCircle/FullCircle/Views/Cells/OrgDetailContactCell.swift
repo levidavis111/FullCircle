@@ -16,12 +16,11 @@ struct OrgDetailContactCellData {
     let locationCoordinates: CLLocationCoordinate2D?
 }
 
-class OrgDetailContactCell: BaseTableViewCell<OrgDetailContactCellData>, CLLocationManagerDelegate, MKMapViewDelegate {
+class OrgDetailContactCell: BaseTableViewCell<OrgDetailContactCellData>{
     
     @IBOutlet weak var phoneButton: UIButton!
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var linkButton: UIButton!
-    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var messageButton: UIButton!
     
     
@@ -30,17 +29,6 @@ class OrgDetailContactCell: BaseTableViewCell<OrgDetailContactCellData>, CLLocat
     let regionRadius: CLLocationDistance = 1000
     
     override func setup() {
-        mapView.delegate = self
-        locationManager.delegate = self
-        setUpUI()
-    }
-    
-    func setUpUI() {
-        phoneButton.setImage(UIImage(systemName: "phone"), for: .normal)
-        emailButton.setImage(UIImage(systemName: "phone"), for: .normal)
-        linkButton.setImage(UIImage(systemName: "phone"), for: .normal)
-        messageButton.setImage(UIImage(systemName: "phone"), for: .normal)
-        
     }
     
     @IBAction func didTapPhoneButton(_ sender: Any) {
@@ -93,16 +81,6 @@ extension OrgDetailContactCell {
         } else {
             return
         }
-    }
-    
-     private func centerMapOnUserLocation() {
-        guard let coordinate = info?.locationCoordinates else { return  }
-        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius, longitudinalMeters: regionRadius)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
-    
-    internal func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        centerMapOnUserLocation()
     }
 }
 

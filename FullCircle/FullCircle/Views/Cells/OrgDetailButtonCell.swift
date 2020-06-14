@@ -18,7 +18,13 @@ class OrgDetailButtonCell: BaseTableViewCell<OrgDetailButtonCellData> {
     
     override func setup() {
         actionButton.setTitle("Donate", for: .normal)
+        setUpUI()
     }
+    
+    func setUpUI() {
+        actionButton.layer.cornerRadius = 5
+    }
+    
     @IBAction func didTapDonate(_ sender: Any) {
         openWebsite()
     }

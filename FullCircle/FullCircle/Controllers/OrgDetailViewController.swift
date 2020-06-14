@@ -13,10 +13,12 @@ class OrgDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var tableSource: TableSource?
+    var organization: Organization!
     
     //Initializer
-    static func create() -> OrgDetailViewController {
+    static func create(_ organization: Organization) -> OrgDetailViewController {
         let vc = UIStoryboard(name: "OrgDetail", bundle: nil).instantiateViewController(withIdentifier: "OrgDetailViewController") as! OrgDetailViewController
+        vc.organization = organization
         return vc
     }
     

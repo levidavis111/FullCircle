@@ -98,6 +98,10 @@ class ActionListViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        actionListTableView.reloadData()
+    }
 
 
 }

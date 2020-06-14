@@ -11,6 +11,16 @@ import UIKit
 class ActionListTableViewCell: UITableViewCell {
     
     //MARK: - UI Objects
+    let noActionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "No saved actions... browse the Actions List to start making a change!"
+        label.textAlignment = .center
+        label.textColor = .gray
+        label.numberOfLines = 0
+        label.isHidden = true
+        return label
+    }()
+    
     let actionNameLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .green

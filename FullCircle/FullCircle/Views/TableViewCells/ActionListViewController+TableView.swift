@@ -37,7 +37,7 @@ extension ActionListViewController: UITableViewDataSource {
             
 //            do {
 //                let savedActions = try ActionPersistenceManager.manager.getSavedActions()
-//                
+//
 //                if let index = savedActions.firstIndex(where: { $0.name == action.name }) {
 //                    try ActionPersistenceManager.manager.deleteAction(actions: savedActions, at: index)
 //                } else {

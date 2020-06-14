@@ -34,6 +34,7 @@ extension ProfileViewController: UITableViewDataSource {
             allActions[index!].isSaved = allActions[index!].isSaved ? false : true
             print("saved button pressed for \(allActions[index!].name). Currently saved: \(allActions[index!].isSaved)")
         }
+        updateUserInfoLabel()
         
         return cell
     }

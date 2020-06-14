@@ -24,10 +24,6 @@ class ProfileViewController: UIViewController {
     
     lazy var userInfoLabel: UILabel = {
         let label = UILabel()
-        label.text = """
-        Saved actions: \(savedActions.count)
-        Actions Taken: TBD!
-        """
         label.numberOfLines = 0
         return label
     }()
@@ -62,7 +58,14 @@ class ProfileViewController: UIViewController {
         
         savedActions = allActions.filter { $0.isSaved == true }
         actionListTableView.reloadData()
+        updateUserInfoLabel()
     }
     
-    
+    func updateUserInfoLabel() {
+        userInfoLabel.text = """
+        Saved actions: \(savedActions.count)
+        Actions Taken: TBD!
+        """
+        userInfoLabel.layoutIfNeeded()
+    }
 }

@@ -37,12 +37,13 @@ class ActionListTableViewCell: UITableViewCell {
     //TODO: Place temp image
     lazy var saveActionButton: UIButton = {
         let button = UIButton()
-        button.setBackgroundImage(UIImage(systemName: "star.circle"), for: .normal)
         button.addTarget(self, action: #selector(saveActionButtonPressed(_:)), for: .touchUpInside)
         return button
     }()
     
     //TODO: Add Follow button for users
+    
+    var saveAction: (() -> ())?
     
     //MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

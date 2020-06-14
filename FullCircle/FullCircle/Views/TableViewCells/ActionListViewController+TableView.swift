@@ -33,7 +33,11 @@ extension ActionListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Segue into ActionDetailVC here
+        let actionDetailVC = ActionDetailViewController()
+        let thisAction = actions[indexPath.row]
+        actionDetailVC.action = thisAction
+        print("Pressed")
+        navigationController?.pushViewController(actionDetailVC, animated: true)
     }
     
 }

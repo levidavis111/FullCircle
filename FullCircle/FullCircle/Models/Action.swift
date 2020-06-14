@@ -17,11 +17,9 @@ class Action: Codable {
     let actionURL: String
     let iconString: String//Stored in Assets folder
     var isSaved: Bool
-<<<<<<< HEAD
     let actionCode: ActionCode
-=======
     
-    init(name: String, description: String, organization: Organization, type: ActionType, location: String, actionURL: String, iconString: String, isSaved: Bool) {
+    init(name: String, description: String, organization: Organization, type: ActionType, location: String, actionURL: String, iconString: String, isSaved: Bool, actionCode: ActionCode) {
         self.name = name
         self.description = description
         self.organization = organization
@@ -30,8 +28,8 @@ class Action: Codable {
         self.actionURL = actionURL
         self.iconString = iconString
         self.isSaved = isSaved
+        self.actionCode = actionCode
     }
->>>>>>> dfe2cf8e14580c26b49786d3a8e7c9df236b2151
 }
 
 enum ActionType: String, Codable {

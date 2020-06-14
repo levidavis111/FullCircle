@@ -37,7 +37,7 @@ extension ActionListTableViewCell {
             noActionLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             noActionLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             noActionLabel.topAnchor.constraint(equalTo: self.topAnchor),
-            noActionLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
+            noActionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 30),
         ])
     }
     

@@ -22,9 +22,7 @@ extension ProfileViewController: UITableViewDataSource {
         
         if savedActions.isEmpty {
             cell.noActionLabel.isHidden = false
-            cell.actionNameLabel.isHidden = true
-            cell.actionTypeImageView.isHidden = true
-            cell.orgNameLabel.isHidden = true
+            cell.infoView.isHidden = true
             cell.saveActionButton.isHidden = true
             
         } else {

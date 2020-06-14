@@ -11,16 +11,18 @@ import UIKit
 class OrgListTableViewCell: UITableViewCell {
     
     //MARK: - UI Objects
+    let infoView = FCCellView()
+    
     let orgNameLabel = FCHeaderLabel()
     
     // Borough, type of org
-    let orgDetailLabel = FCSubHeaderLabel()
+    let orgDetailLabel = FCBodyLabel()
         
     lazy var orgLogoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .blue
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
+        imageView.backgroundColor = .white
         return imageView
     }()
     
@@ -30,6 +32,7 @@ class OrgListTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        backgroundColor = .clear
         addSubviews()
         addConstraints()
     }

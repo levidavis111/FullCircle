@@ -31,6 +31,8 @@
 		EA2B42D62496814700136D4F /* FCBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42D42496814700136D4F /* FCBodyLabel.swift */; };
 		EA2B42D82496818400136D4F /* FCCaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42D72496818400136D4F /* FCCaptionLabel.swift */; };
 		EA2B42D92496818400136D4F /* FCCaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42D72496818400136D4F /* FCCaptionLabel.swift */; };
+		EA2B42DB249689BD00136D4F /* FCCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DA249689BD00136D4F /* FCCellView.swift */; };
+		EA2B42DC249689BD00136D4F /* FCCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2B42DA249689BD00136D4F /* FCCellView.swift */; };
 		EAE7114A2494487A00418D64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE711492494487A00418D64 /* AppDelegate.swift */; };
 		EAE7114C2494487A00418D64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE7114B2494487A00418D64 /* SceneDelegate.swift */; };
 		EAE711512494487A00418D64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE7114F2494487A00418D64 /* Main.storyboard */; };
@@ -89,6 +91,7 @@
 		EA2B42D124967D5A00136D4F /* FCSubHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSubHeaderLabel.swift; sourceTree = "<group>"; };
 		EA2B42D42496814700136D4F /* FCBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCBodyLabel.swift; sourceTree = "<group>"; };
 		EA2B42D72496818400136D4F /* FCCaptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCCaptionLabel.swift; sourceTree = "<group>"; };
+		EA2B42DA249689BD00136D4F /* FCCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCCellView.swift; sourceTree = "<group>"; };
 		EAE711462494487A00418D64 /* FullCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE711492494487A00418D64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAE7114B2494487A00418D64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +320,7 @@
 		EAE7118524953A8300418D64 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				EA2B42DA249689BD00136D4F /* FCCellView.swift */,
 				EAE7118E24956F4F00418D64 /* ActionListTVCell */,
 				EAE7118D24956F2F00418D64 /* OrgListTVCell */,
 			);
@@ -550,6 +554,7 @@
 				EAE7117C249463CA00418D64 /* Action.swift in Sources */,
 				EA2B42BE2495B98800136D4F /* ProfileViewController+TableView.swift in Sources */,
 				EA2B42C02495BD7A00136D4F /* ProfileViewController+Constraints.swift in Sources */,
+				EA2B42DB249689BD00136D4F /* FCCellView.swift in Sources */,
 				EA2B42D224967D5A00136D4F /* FCSubHeaderLabel.swift in Sources */,
 				48B4CA402495292C007B621E /* OrgDetailViewController.swift in Sources */,
 				FC380B5A2495689D00DE703D /* ActionPersistenceManager.swift in Sources */,
@@ -578,6 +583,7 @@
 				EA2B42D024967AD100136D4F /* FCHeaderLabel.swift in Sources */,
 				EAE711612494487D00418D64 /* FullCircleTests.swift in Sources */,
 				EA2B42D62496814700136D4F /* FCBodyLabel.swift in Sources */,
+				EA2B42DC249689BD00136D4F /* FCCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import UIKit
 class ActionListTableViewCell: UITableViewCell {
     
     //MARK: - UI Objects
-    let infoView = UIView()
+    let infoView = FCCellView()
     
     let noActionLabel: FCBodyLabel = {
         let label = FCBodyLabel()

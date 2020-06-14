@@ -56,17 +56,15 @@ class ProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        savedActions = allActions.filter { $0.isSaved == true }
         actionListTableView.reloadData()
         updateUserInfoLabel()
     }
     
     func updateUserInfoLabel() {
+        savedActions = allActions.filter { $0.isSaved == true }
         userInfoLabel.text = """
         Saved actions: \(savedActions.count)
-        Actions Taken: TBD!
+        Actions taken: 0
         """
-        userInfoLabel.layoutIfNeeded()
     }
 }

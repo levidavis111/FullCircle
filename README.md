@@ -2,17 +2,15 @@
 FullCircle is an iOS app that connects and builds relationships between grassroots orgs with individuals to build people power and move individuals along a scaffolded spectrum of civic engagement over time. Development of FullCircle kicked off as a part of [NYC Coder's Hackathon for Black Lives Matter (June 11 - June 14, 2020)](https://www.meetup.com/nyc-coders/events/271029282).
 
 ## Current Features
-OrgDetail here
+<img src="https://user-images.githubusercontent.com/52180404/89468963-88248a00-d746-11ea-8960-662872ea4b36.png" height = 400> <img src="https://user-images.githubusercontent.com/52180404/89469246-0bde7680-d747-11ea-8a85-42a72ba672e5.png" height = 400>
 
 A list of local organizations and details on selected organization with option to call, email, visit website, and donate.
 
-
-MapHere
+<img src="https://user-images.githubusercontent.com/52180404/89469315-2ca6cc00-d747-11ea-9f58-f2524381bd95.png" height = 400> <img src ="https://user-images.githubusercontent.com/52180404/89469395-53650280-d747-11ea-9cda-f08762feff49.png" height = 400> <img src ="https://user-images.githubusercontent.com/52180404/89469443-6972c300-d747-11ea-92eb-bec6a6e43de6.png" height = 400>
 
 A list of actions posted by organizations and details on selected actions.
 
-
-myActions here
+<img src="https://user-images.githubusercontent.com/52180404/89469493-87d8be80-d747-11ea-86eb-5b670fb14b53.png" height = 400>
 
 Ability to save actions.
 
